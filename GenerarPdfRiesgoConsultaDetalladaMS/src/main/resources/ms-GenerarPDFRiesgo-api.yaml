@@ -1,0 +1,835 @@
+openapi: 3.0.1
+servers:
+  - description: Index swagger
+    url: https://api.mibanco.com.co
+info:
+  description: Microservicio para generacion e PDF con consulta detallada de riesgo
+  version: 0.0.1
+  title: GenrarPdfRiesgoConsultaDetallada_MS
+  contact:
+    name: MiBanco
+    url: https://www.mibanco.com.co/
+    email: api@mibanco.com.co
+  license:
+    name: GNU GPLv3
+    url: ‘https://www.gnu.org/licenses/gpl-3.0.html’
+tags:
+  - name: RiesgoConsultaDetallada
+    description: Generacion e PDF con consulta detallada de riesgo
+#----------------------------
+#Endpoints de MS
+#----------------------------
+paths:
+  /v1/ms/centralRiesgo/generaRiesgoHistorial/pdf/{tipoDocumento}/{numeroDocumento}/{digitoVerificacion}:
+    post:
+      summary: Riesgo Historial
+      operationId: generaRiesgoHistorial
+      parameters:
+        - in: path
+          name: tipoDocumento
+          required: true
+          schema:
+            $ref: "#/components/schemas/TipoDocumentoEnum"
+          description: id catalogo
+        - in: path
+          name: numeroDocumento
+          required: true
+          schema:
+            type: string
+          description: Numero Documento
+        - in: path
+          name: digitoVerificacion
+          required: true
+          schema:
+            type: string
+          description: Digito Verificacion
+      responses:
+        "200":
+          description: generate PDF.
+          content:
+            application/json:
+              schema:
+                type: boolean
+        "400":
+          description: Peticion con datos invalidos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        "404":
+          description: "No se encontro datos de PDF"
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+#---------------------------------------------
+#Se declaran los Modelos/Schemas del servicio
+#---------------------------------------------
+
+components:
+  schemas:
+    #    TYPES
+    generarRiesgoConsultaDetalladaInput:
+      type: object
+      properties:
+        tipoDocumento:
+          $ref: "#/components/schemas/TipoDocumentoEnum"
+        numeroDocumento:
+          type: string
+        digitoVerificacion:
+          type: string
+    TipoDocumentoEnum:
+      type: string
+      enum:
+        - CC
+        - TI
+        - CDI
+        - CE
+        - CPA
+        - NIT
+        - PAS
+        - RCN
+        - RUT
+        - TE
+        - RUMC
+    generarPdfRiesgoConsultaDetalladaInput:
+      type: object
+      properties:
+        cliente:
+          $ref: "#/components/schemas/ClienteBaseType"
+        centralRiesgo:
+          $ref: "#/components/schemas/CentralRiesgoType"
+    ClienteBaseType:
+      type: object
+      properties:
+        numeroCliente:
+          type: integer
+        primerNombre:
+          type: string
+        segundoNombre:
+          type: string
+        primerApellido:
+          type: string
+        segundoApellido:
+          type: string
+        tipoDocumento:
+          $ref: "#/components/schemas/TipoDocumentoEnum"
+        numeroDocumento:
+          type: string
+        fechaExpedicionDocumento:
+          type: integer
+        tipoPersona:
+          $ref: "#/components/schemas/TipoPersonaEnum"
+        correoElectronico:
+          type: string
+        numeroCelular:
+          type: integer
+    CentralRiesgoType:
+      type: object
+      properties:
+        antiguedadUbicacion:
+          type: string
+        consultaDetallada:
+          $ref: "#/components/schemas/ConsultaDetalladaType"
+        estadoDocumento:
+          type: string
+        fechaConsultaMasReciente:
+          type: string
+          format: date-time
+        fechaExpedicion:
+          type: string
+          format: date-time
+        genero:
+          type: string
+        historicoEndeudamiento:
+          type: string #modelo incompleto
+        lugarExpedicion:
+          type: string
+        numeroDocumento:
+          type: string
+        rangoEdad:
+          type: string
+        resultadoConsultaMasReciente:
+          type: string
+        tieneRUT:
+          type: boolean
+        tipoDocumento:
+          $ref: "#/components/schemas/TipoDocumentoEnum"
+        tipoRelacion:
+          $ref: "#/components/schemas/TipoRelacionEnum"
+        tipoReporte:
+          $ref: "#/components/schemas/TipoReporteXmlEnum"
+        vbVigenteParaSerConsultado:
+          type: boolean
+        digitoVerificacion:
+          type: string
+    #    HistoricoEndeudamientoType:
+    #      type: object
+    #      properties:
+    #        resumenGeneral:
+    #          type: array
+    #        bancoConDeuda:
+    #          type: array
+    #        cuotasPorSector:
+    #          type: array
+    ConsultaDetalladaType:
+      type: object
+      properties:
+        analisisVector:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnalisisVectorType"
+        endeudamientoActual:
+          type: array
+          items:
+            $ref: "#/components/schemas/EndeudamientoActualType"
+        endeudamientoActualTotal:
+          $ref: "#/components/schemas/EndeudamientoActualTotalType"
+        endeudamientoGlobal:
+          type: array
+          items:
+            $ref: "#/components/schemas/EndeudamientoGlobalType"
+        evolucionDeuda:
+          type: array
+          items:
+            $ref: "#/components/schemas/EvolucionDeudaType"
+        habitoDePagoAbiertas:
+          type: array
+          items:
+            $ref: "#/components/schemas/HabitoDePagoAbiertasType"
+        habitoDePagoCerradas:
+          type: array
+          items:
+            $ref: "#/components/schemas/HabitoDePagoCerradasType"
+        historicoConsulta:
+          type: array
+          items:
+            $ref: "#/components/schemas/HistoricoConsultaType"
+        perfilSector:
+          type: array
+          items:
+            $ref: "#/components/schemas/PerfilSectorType"
+        perfilSectorTotal:
+          type: array
+          items:
+            $ref: "#/components/schemas/PerfilSectorTotalType"
+        resumenEndeudamientoGlobal:
+          type: array
+          items:
+            $ref: "#/components/schemas/ResumenEndeudamientoGlobalType"
+        saldosYMoras:
+          type: array
+          items:
+            $ref: "#/components/schemas/SaldosYMorasType"
+    HistoricoConsultaType:
+      type: object
+      properties:
+        ciudad:
+          type: string
+        consultanteMotivoConsulta:
+          type: string
+        fecha:
+          type: string
+          format: date-time
+        numeroConsultas:
+          type: integer
+        oficina:
+          type: string
+        tipoCuenta:
+          $ref: "#/components/schemas/TipoCuentaXmlEnum"
+    PerfilSectorType:
+      type: object
+      properties:
+        antiguedadDesde:
+          type: string
+          format: date-time
+        consultaUltimos6Meses:
+          type: integer
+        creditosCerrados:
+          type: integer
+        creditosReestructurados:
+          type: integer
+        creditosRefinanciados:
+          type: integer
+        creditosVigentes:
+          type: integer
+        desacuerdosVigentesAFecha:
+          type: integer
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+    PerfilSectorTotalType:
+      type: object
+      properties:
+        antiguedadDesde:
+          type: string
+          format: date-time
+        consultaUltimos6Meses:
+          type: integer
+        creditosCerrados:
+          type: integer
+        creditosReestructurados:
+          type: integer
+        creditosRefinanciados:
+          type: integer
+        creditosVigentes:
+          type: integer
+        desacuerdosVigentesAFecha:
+          type: integer
+        totalSector:
+          $ref: "#/components/schemas/TotalSectorXmlEnum"
+    AnalisisVectorType:
+      type: object
+      properties:
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        entidad:
+          type: string
+        numCuenta:
+          type: integer
+        tipoCuenta:
+          type: string
+        estado:
+          type: string
+        periodo:
+          type: string
+    EndeudamientoActualType:
+      type: object
+      properties:
+        calidad:
+          type: string
+        calificacion:
+          type: string
+        cartera:
+          $ref: "#/components/schemas/TipoCarteraXmlEnum"
+        estadoEndeudamientoActual:
+          $ref: "#/components/schemas/EstadoEndeudamientoActualXmlEnum"
+        porcentajeDeuda:
+          type: number
+          format: float
+        porcentajePart:
+          type: number
+          format: float
+        saldoActual:
+          type: number
+          format: float
+        saldoEnMora:
+          type: number
+          format: float
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        valorCuota:
+          type: number
+          format: float
+        vlrOCupoInicial:
+          type: number
+          format: float
+    EndeudamientoActualTotalType:
+      type: object
+      properties:
+        porcentajeDeuda:
+          type: number
+          format: float
+        porcentajePart:
+          type: number
+          format: float
+        saldoActual:
+          type: number
+          format: float
+        saldoEnMora:
+          type: number
+          format: float
+        valorCuota:
+          type: number
+          format: float
+        vlrOCupoInicial:
+          type: number
+          format: float
+    EvolucionDeudaType:
+      type: object
+      properties:
+        evolucionDetalle:
+          type: array
+          items:
+            $ref: "#/components/schemas/EvolucionDetalleType"
+        trimestre:
+          type: string
+    EvolucionDetalleType:
+      type: object
+      properties:
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        cartera:
+          $ref: "#/components/schemas/TipoCarteraXmlEnum"
+        cupoInicial:
+          type: number
+          format: float
+        saldo:
+          type: number
+          format: float
+        saldoEnMora:
+          type: number
+          format: float
+        valorCuota:
+          type: number
+          format: float
+        porcentajeDeuda:
+          type: number
+          format: float
+        menorCalificacion:
+          type: string
+    EndeudamientoGlobalType:
+      type: object
+      properties:
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        comercialMiles:
+          type: number
+          format: float
+        comercialNumero:
+          type: integer
+        entidadInformante:
+          type: string
+        calificacion:
+          type: string
+        hipotecarioMiles:
+          type: number
+          format: float
+        hipotecarioNumero:
+          type: integer
+        numero:
+          type: integer
+        consumoYTarjetaCreditoMiles:
+          type: number
+          format: float
+        saldoTotal:
+          type: number
+          format: float
+        consumoYTarjetaCreditoNumero:
+          type: integer
+        microcreditoMiles:
+          type: number
+          format: float
+        microcreditoNumero:
+          type: integer
+        garantiaTipo:
+          type: string
+        garantiafechaAvaluo:
+          type: string
+          format: date-time
+        garantiaValor:
+          type: number
+          format: float
+        moneda:
+          type: string
+        fuente:
+          type: string
+    ResumenEndeudamientoGlobalType:
+      type: object
+      properties:
+        fechaCorte:
+          type: string
+          format: date-time
+        detalleResumenEndeudamientoGlobal:
+          type: array
+          items:
+            $ref: "#/components/schemas/DetalleResumenEndeudamientoGlobalType"
+    DetalleResumenEndeudamientoGlobalType:
+      type: object
+      properties:
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        comercialMiles:
+          type: number
+          format: float
+        comercialNumero:
+          type: integer
+        hipotecarioMiles:
+          type: number
+          format: float
+        hipotecarioNumero:
+          type: integer
+        consumoYTarjetaCreditoMiles:
+          type: number
+          format: float
+        consumoYTarjetaCreditoNumero:
+          type: integer
+        microcreditoMiles:
+          type: number
+          format: float
+        microcreditoNumero:
+          type: integer
+        porcentajeParticipacion:
+          type: number
+          format: float
+    HabitoDePagoAbiertasType:
+      type: object
+      properties:
+        47meses:
+          type: string
+        adjetivoFecha:
+          type: string
+          format: date-time
+        calificacion:
+          type: string
+        cuotasMVigencia:
+          type: string
+        desacuerdoInformacion:
+          type: string
+        entidadInformante:
+          type: string
+        estadoObligacion:
+          $ref: "#/components/schemas/EstadoObligacionXmlEnum"
+        estadoTitular:
+          type: string
+        fechaActualizacion:
+          type: string
+          format: date-time
+        fechaApertura:
+          type: string
+          format: date-time
+        fechaLimitePago:
+          type: string
+          format: date-time
+        fechaPago:
+          type: string
+          format: date-time
+        fechaVencimiento:
+          type: string
+          format: date-time
+        marcaClase:
+          $ref: "#/components/schemas/TipoMarcaClaseXmlEnum"
+        moraMaxima:
+          type: string
+        numeroCuenta:
+          type: integer
+        numeroChequeDevueltos:
+          type: integer
+        oficinaDeudor:
+          type: string
+        perm:
+          type: integer
+        porcentajeDeuda:
+          type: number
+          format: float
+        saldoActual:
+          type: number
+          format: float
+        saldoMora:
+          type: number
+          format: float
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        tipoCuenta:
+          $ref: "#/components/schemas/TipoCuentaXmlEnum"
+        tipoGarantia:
+          $ref: "#/components/schemas/TipoGarantiaXmlEnum"
+        valorCuota:
+          type: number
+          format: float
+        vrlOcupoInicial:
+          type: number
+          format: float
+    HabitoDePagoCerradasType:
+      type: object
+      properties:
+        47meses:
+          type: string
+        adjetivoFecha:
+          type: string
+          format: date-time
+        calificacion:
+          type: string
+        ciudadFechaVencimiento:
+          type: string
+        desacuerdoInformacion:
+          type: string
+        entidadInformante:
+          type: string
+        estadoObligacion:
+          $ref: "#/components/schemas/EstadoObligacionXmlEnum"
+        fechaApertura:
+          type: string
+          format: date-time
+        fechaCierre:
+          type: string
+          format: date-time
+        numeroCuenta:
+          type: integer
+        oficinaDeudor:
+          type: string
+        sector:
+          $ref: "#/components/schemas/TIpoSectorXmlEnum"
+        tipoCuenta:
+          $ref: "#/components/schemas/TipoCuentaXmlEnum"
+        vrlOCupoInicial:
+          type: number
+          format: float
+    SaldosYMorasType:
+      type: object
+      properties:
+        morasMaxSectorReal:
+          type: string
+        morasMaxSectorTelcos:
+          type: string
+        numCreditosConMoraIgual30Dias:
+          type: number
+          format: float
+        numCreditosConMoraIMayorOIgual60Dias:
+          type: number
+          format: float
+        periodoSaldoYMoras:
+          type: string
+        saldoDeudaTotal:
+          type: number
+          format: float
+        saldoDeudaTotalEnMora:
+          type: number
+          format: float
+        totalMorasMaximas:
+          type: string
+
+    #ENUMS
+    TipoPersonaEnum:
+      type: string
+      enum:
+        - Natural
+        - Juridica
+    EstadoObligacionXmlEnum:
+      type: string
+      enum:
+        - ACTIVA
+        - EMBARGADA
+        - EMBARGADA-ACTIVA
+        - AL DÍA
+        - AL DÍA MXX
+        - ESTÁ EN MORA XX
+        - ESTÁ EN MORA XX RM XX
+        - DUDOSO RECAUDO
+        - CART.CASTIGADA
+        - REESTRUCTURADA
+        - REFINANCIADA
+        - TRANS.PRODUCTO
+        - NORMAL
+        - COMPRADA
+        - NORMAL REESTRUCTURADA
+        - NORMAL REFINANCIADA
+    TotalSectorXmlEnum:
+      type: string
+      enum:
+        - TOTAL SECTORES
+        - TOTAL COMO PRINCIPAL
+        - TOTAL COMO CODEUDOR Y OTROS
+    TIpoSectorXmlEnum:
+      type: string
+      enum:
+        - SECTOR FINANCIERO
+        - SECTOR COOPERATIVO
+        - SECTOR REAL
+        - SECTOR TELECOMUNICACIONES (TELCOS)
+    TipoRelacionEnum:
+      type: string
+      enum:
+        - TITULAR
+        - CÓNYUGE
+    TipoReporteXmlEnum:
+      type: string
+      enum:
+        - CONSULTA DETALLADA
+        - HISTORICO DE ENDEUDAMIENTO
+    TipoCuentaXmlEnum:
+      type: string
+      enum:
+        - COC
+        - COF
+        - COM
+        - CON
+        - COR
+        - CPE
+        - CPG
+        - CPY
+        - CRD
+        - CRE
+        - CSA
+        - CSB
+        - CSG
+        - CSL
+        - CSM
+        - CSP
+        - CSU
+        - CTC
+        - CTR
+        - CTU
+        - CVB
+        - CVD
+        - CVE
+        - CVH
+        - CVN
+        - CVP
+        - CVT
+        - CVV
+        - DIC
+        - EDU
+        - EST
+        - FER
+        - FIT
+        - FUN
+        - GRM
+        - IND
+        - LAB
+        - LAP
+        - LBC
+        - LBD
+        - LBE
+        - LBK
+        - LBP
+        - LBR
+        - LBZ
+        - LFI
+        - LHV
+        - LIN
+        - LNV
+        - LOP
+        - LOT
+        - LVE
+        - MCR
+        - RUR
+        - SAC
+        - SBG
+        - SCC
+        - SEG
+        - SFI
+        - SGE
+        - SHO
+        - SVE
+        - SVI
+        - TDC
+        - TDD
+        - TRT
+    TipoCarteraXmlEnum:
+      type: string
+      enum:
+        - AGR
+        - AHO
+        - ALI
+        - APD
+        - CAB
+        - CAC
+        - CAU
+        - CAV
+        - CBM
+        - CBR
+        - CCB
+        - CCC
+        - CCF
+        - COF
+        - COM
+        - CON
+        - CSA
+        - CSP
+        - CTC
+        - CTU
+        - CVE
+        - DIC
+        - EDU
+        - EST
+        - FER
+        - FUN
+        - CCL
+        - CCS
+        - CDB
+        - CDC
+        - CEL
+        - CFE
+        - CFR
+        - CLB
+        - CMU
+        - CMZ
+        - COC
+        - GRM
+        - IND
+        - LAB
+        - LBZ
+        - MCR
+        - SBG
+        - SEG
+        - SFI
+        - TDC
+        - TRT
+    EstadoEndeudamientoActualXmlEnum:
+      type: string
+      enum:
+        - ACTIVA
+        - EMBARGADA
+        - EMBARGADA-ACTIVA
+        - AL DÍA
+        - AL DÍA MXX
+        - ESTÁ EN MORA XX
+        - ESTÁ EN MORA XX RM XX
+        - DUDOSO RECAUDO
+        - CART.CASTIGADA
+        - REESTRUCTURADA
+        - REFINANCIADA
+        - TRANS.PRODUCTO
+        - NORMAL
+        - COMPRADA
+    TipoGarantiaXmlEnum:
+      type: string
+      enum:
+        - SIN GAR
+        - ADMIS
+        - OTR GAR
+        - NO IDON
+        - BIEN RAÍCES
+        - PIGN RENTA
+        - GAR. SOBER.NACION
+        - CONT IRREV FIDUC
+        - FNG
+        - CARTA CRÉD
+        - FAG
+        - PERSONAL
+        - BIEN LEASI NO INMOB
+        - BIEN LEASI INMOB
+        - PRENDA TÍTULO
+        - DEPOSITOS
+        - SEG CREDITO
+    TipoMarcaClaseXmlEnum:
+      type: string
+      enum:
+        - NOR
+        - NOM
+        - GMF
+        - NGM
+        - ELE
+        - AFC
+
+    Error:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 400
+        message:
+          type: string
+          example: "The request is invalid."
+      required:
+        - status
+        - message
+
+
+  responses:
+    NotFound:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
