@@ -19,7 +19,7 @@ public enum TipoGarantiaXmlEnum {
   
   NO_IDON("NO IDON"),
   
-  BIEN_RA_CES("BIEN RAÍCES"),
+  BIEN_RAICES("BIEN RAICES"),
   
   PIGN_RENTA("PIGN RENTA"),
   
@@ -29,7 +29,7 @@ public enum TipoGarantiaXmlEnum {
   
   FNG("FNG"),
   
-  CARTA_CR_D("CARTA CRÉD"),
+  CARTA_CRED("CARTA CRED"),
   
   FAG("FAG"),
   
@@ -39,7 +39,7 @@ public enum TipoGarantiaXmlEnum {
   
   BIEN_LEASI_INMOB("BIEN LEASI INMOB"),
   
-  PRENDA_T_TULO("PRENDA TÍTULO"),
+  PRENDA_TITULO("PRENDA TITULO"),
   
   DEPOSITOS("DEPOSITOS"),
   

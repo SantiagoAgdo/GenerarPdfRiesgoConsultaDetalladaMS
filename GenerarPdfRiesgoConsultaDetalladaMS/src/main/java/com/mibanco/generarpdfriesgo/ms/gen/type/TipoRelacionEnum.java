@@ -13,7 +13,7 @@ public enum TipoRelacionEnum {
   
   TITULAR("TITULAR"),
   
-  C_NYUGE("CÓNYUGE");
+  CONYUGE("CONYUGE");
 
   private String value;
 

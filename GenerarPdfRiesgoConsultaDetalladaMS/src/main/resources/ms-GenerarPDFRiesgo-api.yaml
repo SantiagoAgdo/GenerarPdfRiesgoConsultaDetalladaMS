@@ -604,10 +604,10 @@ components:
         - ACTIVA
         - EMBARGADA
         - EMBARGADA-ACTIVA
-        - AL DÍA
-        - AL DÍA MXX
-        - ESTÁ EN MORA XX
-        - ESTÁ EN MORA XX RM XX
+        - AL DIA
+        - AL DIA MXX
+        - ESTA EN MORA XX
+        - ESTA EN MORA XX RM XX
         - DUDOSO RECAUDO
         - CART.CASTIGADA
         - REESTRUCTURADA
@@ -634,7 +634,7 @@ components:
       type: string
       enum:
         - TITULAR
-        - CÓNYUGE
+        - CONYUGE
     TipoReporteXmlEnum:
       type: string
       enum:
@@ -765,10 +765,10 @@ components:
         - ACTIVA
         - EMBARGADA
         - EMBARGADA-ACTIVA
-        - AL DÍA
-        - AL DÍA MXX
-        - ESTÁ EN MORA XX
-        - ESTÁ EN MORA XX RM XX
+        - AL DIA
+        - AL DIA MXX
+        - ESTA EN MORA XX
+        - ESTA EN MORA XX RM XX
         - DUDOSO RECAUDO
         - CART.CASTIGADA
         - REESTRUCTURADA
@@ -783,17 +783,17 @@ components:
         - ADMIS
         - OTR GAR
         - NO IDON
-        - BIEN RAÍCES
+        - BIEN RAICES
         - PIGN RENTA
         - GAR. SOBER.NACION
         - CONT IRREV FIDUC
         - FNG
-        - CARTA CRÉD
+        - CARTA CRED
         - FAG
         - PERSONAL
         - BIEN LEASI NO INMOB
         - BIEN LEASI INMOB
-        - PRENDA TÍTULO
+        - PRENDA TITULO
         - DEPOSITOS
         - SEG CREDITO
     TipoMarcaClaseXmlEnum:

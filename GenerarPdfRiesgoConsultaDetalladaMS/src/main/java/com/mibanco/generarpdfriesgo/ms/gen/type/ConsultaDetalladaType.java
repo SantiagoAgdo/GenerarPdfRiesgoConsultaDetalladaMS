@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 
 @JsonTypeName("ConsultaDetalladaType")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2023-09-12T16:50:17.088947-05:00[America/Bogota]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2023-09-18T15:36:44.386213-05:00[America/Bogota]")
 public class ConsultaDetalladaType   {
   private @Valid List<AnalisisVectorType> analisisVector;
   private @Valid List<EndeudamientoActualType> endeudamientoActual;
