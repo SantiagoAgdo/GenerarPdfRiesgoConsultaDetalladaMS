@@ -5,9 +5,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
-import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,7 +30,6 @@ public class PdfGeneratorService {
     }
 
     private static PDType0Font getFont() throws IOException {
-        PDType0Font font = PDType0Font.load(new PDDocument(), new File("/Users/santiagoagudelo/Downloads/Roboto/Roboto-Light.ttf"));
-        return font;
+        return PDType0Font.load(new PDDocument(), new File("/Users/santiagoagudelo/Downloads/Roboto/Roboto-Light.ttf"));
     }
 }

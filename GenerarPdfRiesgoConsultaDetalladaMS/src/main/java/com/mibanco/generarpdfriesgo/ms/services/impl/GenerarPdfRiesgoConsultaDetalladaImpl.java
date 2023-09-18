@@ -10,9 +10,6 @@ import jakarta.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @ApplicationScoped
 public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoConsultaDetallada {
 
@@ -22,15 +19,12 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     @Inject
     RiesgoConsultaDetalladaDaoImpl riesgoConsultaDetalladaDao;
 
-    @Inject
-    RiesgoConsultaMapper mapper;
-
     @Override
     public boolean generarRiesgoHistoricoEndeudamiento(TipoDocumentoEnum tipoDocumento, String numeroDocumento, String digitoVerificacion) {
         LOG.info("Inicia consulta Detallada de riesgo ");
         GenerarPdfRiesgoConsultaDetalladaEntity dataRiesgoConsulta = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(tipoDocumento,numeroDocumento,digitoVerificacion);
 
         LOG.info("Termina consulta Detallada de riesgo");
-        return dataRiesgoConsulta != null ? true : false;
+        return dataRiesgoConsulta != null;
     }
 }

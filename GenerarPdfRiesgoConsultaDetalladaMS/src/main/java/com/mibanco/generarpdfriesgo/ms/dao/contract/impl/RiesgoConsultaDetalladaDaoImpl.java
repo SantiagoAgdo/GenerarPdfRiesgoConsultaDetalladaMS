@@ -36,9 +36,7 @@ public class RiesgoConsultaDetalladaDaoImpl implements RiesgoConsultaDetalladaDa
         ClienteBaseEntity  clienteBaseEntity = new ClienteBaseEntity(12345, "John", "Doe", "Smith", "Johnson", TipoDocumentoEnum.CC, "AB123456", 20220101, TipoPersonaEnum.JURIDICA, "john.doe@example.com", 5555555);
         CentralRiesgoEntity centralRiesgo = new CentralRiesgoEntity("5 años", consultaDetallada, "Válido", new Date(), new Date(), "Masculino", "Bueno", "Ciudad", "123456789", "30-40", "Aprobado", true, TipoDocumentoEnum.CC, TipoRelacionEnum.CONYUGE, TipoReporteXmlEnum.CONSULTA_DETALLADA, true, "7");
 
-        GenerarPdfRiesgoConsultaDetalladaEntity generarPdfRiesgoConsultaDetalladaEntity = new GenerarPdfRiesgoConsultaDetalladaEntity(clienteBaseEntity, centralRiesgo);
-
-        return generarPdfRiesgoConsultaDetalladaEntity;
+        return new GenerarPdfRiesgoConsultaDetalladaEntity(clienteBaseEntity, centralRiesgo);
     }
 
 }

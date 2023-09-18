@@ -3,9 +3,7 @@ package com.mibanco.generarpdfriesgo.ms.services.command.bussiness;
 import com.mibanco.generarpdfriesgo.ms.dto.GenerarPdfRiesgoConsultaDetalladaDTO;
 import com.mibanco.generarpdfriesgo.ms.services.command.Command;
 import com.mibanco.generarpdfriesgo.ms.services.command.IParam;
-import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;

@@ -4,8 +4,6 @@ import com.mibanco.generarpdfriesgo.ms.gen.contract.V1GenerarPdfRiesgoConsultaDe
 import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
 import com.mibanco.generarpdfriesgo.ms.services.impl.PdfGeneratorService;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Response;
 
 import java.io.File;
