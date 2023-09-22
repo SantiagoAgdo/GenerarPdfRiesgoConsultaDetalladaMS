@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 
 @JsonTypeName("ResumenEndeudamientoGlobalType")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2023-09-18T15:36:44.386213-05:00[America/Bogota]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2023-09-22T09:11:08.374773-05:00[America/Bogota]")
 public class ResumenEndeudamientoGlobalType   {
   private @Valid Date fechaCorte;
   private @Valid List<DetalleResumenEndeudamientoGlobalType> detalleResumenEndeudamientoGlobal;

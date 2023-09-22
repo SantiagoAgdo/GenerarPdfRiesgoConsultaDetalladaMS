@@ -250,8 +250,47 @@ message ResponseGenerarRiesgoConsultaDetallada{
   bool obj = 1;
 }
 
+//Message Proto Historial
+message ConsultarUrlArchivoMasRecienteXmlInput {
+  string tipoDocumento = 1;
+  string numeroDocumento = 2;
+  string digitoVerificacion = 3;
+}
 
-service GenerarPdfRiesgoHistoricoEndeudamientoGrpc{
+message  ResponseConsultaUrlArchivoMasRecienteXmlOutput{
+  string url = 1;
+}
+
+//Message proto Archivo
+message Creado {
+  ArchivoGrpc Archivo = 1;
+}
+
+message Creado2 {
+  ArchivoByUrlGrpc ArchivoByUrl = 1;
+}
+
+message ArchivoGrpc {
+  string archivoID = 1;
+  string extensionArchivo = 2;
+  string nombreArchivo = 3;
+  string url = 4;
+  bool urlPublica = 5;
+  repeated bytes base64 = 6;
+}
+
+message ArchivoByUrlGrpc {
+  string url = 1;
+}
+
+service ConsultarUrlArchivoMasRecienteXmlGrpc{
+  //rpc GeneracionPdf
   rpc generarRiesgoHistoricoEndeudamiento(GenerarRiesgoConsultaDetalladaInput) returns (ResponseGenerarRiesgoConsultaDetallada);
+
+  //rpc HistorialConsultaRiesgo
+  rpc consultarUrlArchivoMasRecienteXml(ConsultarUrlArchivoMasRecienteXmlInput) returns (ResponseConsultaUrlArchivoMasRecienteXmlOutput);
+
+  //rpc Archivo
+  rpc consultarArchivoPorUbicacion(ArchivoByUrlGrpc) returns (Creado);
 }
 

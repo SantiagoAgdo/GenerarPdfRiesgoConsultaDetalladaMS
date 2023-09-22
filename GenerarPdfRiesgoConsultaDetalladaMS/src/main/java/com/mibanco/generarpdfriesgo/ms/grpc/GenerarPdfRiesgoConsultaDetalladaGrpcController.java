@@ -1,9 +1,8 @@
 package com.mibanco.generarpdfriesgo.ms.grpc;
 
-import com.mibanco.generarpdfriesgo.ms.GenerarPdfRiesgoHistoricoEndeudamientoGrpcGrpc;
+import com.mibanco.generarpdfriesgo.ms.ConsultarUrlArchivoMasRecienteXmlGrpcGrpc;
 import com.mibanco.generarpdfriesgo.ms.GenerarRiesgoConsultaDetalladaInput;
 import com.mibanco.generarpdfriesgo.ms.ResponseGenerarRiesgoConsultaDetallada;
-import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapperGrpc;
@@ -20,7 +19,7 @@ import org.slf4j.LoggerFactory;
 
 
 @GrpcService
-public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends GenerarPdfRiesgoHistoricoEndeudamientoGrpcGrpc.GenerarPdfRiesgoHistoricoEndeudamientoGrpcImplBase {
+public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcImplBase {
 
     public static final Logger LOG = LoggerFactory.getLogger(GenerarPdfRiesgoConsultaDetalladaGrpcController.class);
 
@@ -40,8 +39,7 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends GenerarPdfR
         LOG.info("Inicia generacion de riesgo Historico por GRPC");
         try {
             validator.validarConsulta(request);
-            TipoDocumentoEnum tipoDocumento = mapper.tipoDocumentoToEnum(request.getTipoDocumento());
-            boolean rptService = service.generarRiesgoHistoricoEndeudamiento(tipoDocumento,request.getNumeroDocumento(), request.getDigitoVerificacion());
+            boolean rptService = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(),request.getNumeroDocumento(), request.getDigitoVerificacion());
 
             ResponseGenerarRiesgoConsultaDetallada response = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(rptService).build();
             LOG.info("Finaliza generacion de riesgo Historico por GRPC");

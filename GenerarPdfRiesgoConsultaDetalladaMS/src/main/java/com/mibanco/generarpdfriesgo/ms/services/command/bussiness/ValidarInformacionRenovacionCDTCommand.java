@@ -1,5 +1,6 @@
 package com.mibanco.generarpdfriesgo.ms.services.command.bussiness;
 
+import com.mibanco.generarpdfriesgo.ms.ConsultarUrlArchivoMasRecienteXmlInput;
 import com.mibanco.generarpdfriesgo.ms.dto.GenerarPdfRiesgoConsultaDetalladaDTO;
 import com.mibanco.generarpdfriesgo.ms.services.command.Command;
 import com.mibanco.generarpdfriesgo.ms.services.command.IParam;
@@ -11,18 +12,16 @@ import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
 @ApplicationScoped
-public class validarInformacionRenovacionCDTCommand implements Command {
-
+public class ValidarInformacionRenovacionCDTCommand implements Command {
 
 
     @Override
-    public Object execute(IParam parametro) {
+    public Object execute(ConsultarUrlArchivoMasRecienteXmlInput parametro) {
 
-        GenerarPdfRiesgoConsultaDetalladaDTO consultaDetallada = (GenerarPdfRiesgoConsultaDetalladaDTO) parametro;
-        return tieneAtributosNulos(consultaDetallada);
+        return tieneAtributosNulos(parametro);
     }
 
-    private boolean tieneAtributosNulos(Object obj) {
+    private boolean tieneAtributosNulos(ConsultarUrlArchivoMasRecienteXmlInput obj) {
         boolean isValidateSuccess = true;
         try {
             BeanInfo bean = Introspector.getBeanInfo(obj.getClass());
@@ -38,7 +37,7 @@ public class validarInformacionRenovacionCDTCommand implements Command {
             e.printStackTrace();
         }
 
-        return !isValidateSuccess;
+        return isValidateSuccess;
     }
 
     @Override

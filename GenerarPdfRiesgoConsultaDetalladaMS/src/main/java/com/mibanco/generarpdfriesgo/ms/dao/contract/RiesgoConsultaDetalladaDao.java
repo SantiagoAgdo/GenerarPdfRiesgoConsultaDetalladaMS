@@ -6,5 +6,5 @@ import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
 
 public interface RiesgoConsultaDetalladaDao {
 
-    GenerarPdfRiesgoConsultaDetalladaEntity generarRiesgoHistoricoEndeudamiento(TipoDocumentoEnum tipoDocumento, String numeroDocumento, String digitoVerificacion);
+    GenerarPdfRiesgoConsultaDetalladaEntity generarRiesgoHistoricoEndeudamiento(String tipoDocumento, String numeroDocumento, String digitoVerificacion);
 }
