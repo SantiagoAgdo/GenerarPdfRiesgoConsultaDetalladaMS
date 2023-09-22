@@ -9,6 +9,8 @@ import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ValidarInforma
 import com.mibanco.generarpdfriesgo.ms.services.contract.IGenerarPdfRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapper;
 import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapperGrpc;
+import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
+import com.mibanco.historialconsultaclientecentralriesgo.es.ResponseConsultaUrlArchivoMasRecienteXmlOutput;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.quarkus.grpc.GrpcClient;
@@ -32,7 +34,7 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     RiesgoConsultaDetalladaDaoImpl riesgoConsultaDetalladaDao;
 
     @GrpcClient("clientehistorialconsultariesgo")
-    ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub serviceGrpc;
+    com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub serviceGrpc;
 
     @GrpcClient("clientearchivo")
     ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub serviceArchivoGrpc;
@@ -46,11 +48,11 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
                 .setDigitoVerificacion(digitoVerificacion)
                 .build();
         LOG.info(serviceGrpc.toString());
-        Boolean validacionCmd = (Boolean) command.execute(data);
+//        Boolean validacionCmd = (Boolean) command.execute(data);
 
-        if (validacionCmd){
-//            ResponseConsultaUrlArchivoMasRecienteXmlOutput rptGrpc = serviceGrpc.consultarUrlArchivoMasRecienteXml(data);
-//            System.out.println(rptGrpc);
+        if (true){
+            ResponseConsultaUrlArchivoMasRecienteXmlOutput rptGrpc = serviceGrpc.consultarUrlArchivoMasRecienteXml(data);
+            System.out.println(rptGrpc);
 
 //            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8088).build();
 //            ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub blockingStub
@@ -59,10 +61,10 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
 ////            HelloRequest request = HelloRequest.newBuilder().setName("Bard").build();
 //            ResponseConsultaUrlArchivoMasRecienteXmlOutput response = blockingStub.consultarUrlArchivoMasRecienteXml(data);
 
-            ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl("www.test.com").build();
-            Creado rptArchivo =  serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
-
-            System.out.println(rptArchivo);
+//            ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl("www.test.com").build();
+//            Creado rptArchivo =  serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
+//
+//            System.out.println(rptArchivo);
 //            System.out.println(response.getUrl());
 
 //            channel.shutdown();

@@ -1,9 +1,9 @@
 package com.mibanco.generarpdfriesgo.ms.services.command.bussiness;
 
-import com.mibanco.generarpdfriesgo.ms.ConsultarUrlArchivoMasRecienteXmlInput;
 import com.mibanco.generarpdfriesgo.ms.dto.GenerarPdfRiesgoConsultaDetalladaDTO;
 import com.mibanco.generarpdfriesgo.ms.services.command.Command;
 import com.mibanco.generarpdfriesgo.ms.services.command.IParam;
+import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.beans.BeanInfo;

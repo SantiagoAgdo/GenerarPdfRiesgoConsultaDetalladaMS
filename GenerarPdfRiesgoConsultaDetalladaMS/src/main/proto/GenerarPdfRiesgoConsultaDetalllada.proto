@@ -2,7 +2,6 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 option java_package = "com.mibanco.generarpdfriesgo.ms";
-option java_outer_classname = "GenerarPdfRiesgoConsultaDetalladaGrpc";
 
 package GenerarPdfRiesgoConsultaDetalladaGrpc;
 
@@ -250,16 +249,6 @@ message ResponseGenerarRiesgoConsultaDetallada{
   bool obj = 1;
 }
 
-//Message Proto Historial
-message ConsultarUrlArchivoMasRecienteXmlInput {
-  string tipoDocumento = 1;
-  string numeroDocumento = 2;
-  string digitoVerificacion = 3;
-}
-
-message  ResponseConsultaUrlArchivoMasRecienteXmlOutput{
-  string url = 1;
-}
 
 //Message proto Archivo
 message Creado {
@@ -287,8 +276,6 @@ service ConsultarUrlArchivoMasRecienteXmlGrpc{
   //rpc GeneracionPdf
   rpc generarRiesgoHistoricoEndeudamiento(GenerarRiesgoConsultaDetalladaInput) returns (ResponseGenerarRiesgoConsultaDetallada);
 
-  //rpc HistorialConsultaRiesgo
-  rpc consultarUrlArchivoMasRecienteXml(ConsultarUrlArchivoMasRecienteXmlInput) returns (ResponseConsultaUrlArchivoMasRecienteXmlOutput);
 
   //rpc Archivo
   rpc consultarArchivoPorUbicacion(ArchivoByUrlGrpc) returns (Creado);
