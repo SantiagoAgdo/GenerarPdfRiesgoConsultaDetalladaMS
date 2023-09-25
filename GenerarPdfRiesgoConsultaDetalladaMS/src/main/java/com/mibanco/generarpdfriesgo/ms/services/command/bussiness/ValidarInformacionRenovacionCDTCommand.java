@@ -1,6 +1,8 @@
 package com.mibanco.generarpdfriesgo.ms.services.command.bussiness;
 
+import com.mibanco.archivo.us.Creado;
 import com.mibanco.generarpdfriesgo.ms.dto.GenerarPdfRiesgoConsultaDetalladaDTO;
+import com.mibanco.generarpdfriesgo.ms.gen.type.CentralRiesgoType;
 import com.mibanco.generarpdfriesgo.ms.services.command.Command;
 import com.mibanco.generarpdfriesgo.ms.services.command.IParam;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
@@ -19,6 +21,11 @@ public class ValidarInformacionRenovacionCDTCommand implements Command {
     public Object execute(ConsultarUrlArchivoMasRecienteXmlInput parametro) {
 
         return tieneAtributosNulos(parametro);
+    }
+
+    @Override
+    public Object execute(Creado parametro) {
+        return null;
     }
 
     private boolean tieneAtributosNulos(ConsultarUrlArchivoMasRecienteXmlInput obj) {

@@ -1,21 +1,23 @@
 package com.mibanco.generarpdfriesgo.ms.services.impl;
 
 
-import com.mibanco.generarpdfriesgo.ms.*;
+import com.mibanco.archivo.us.ArchivoByUrlGrpc;
+import com.mibanco.archivo.us.ArchivoServiceGrpcGrpc;
+import com.mibanco.archivo.us.Creado;
+import com.mibanco.generarpdfriesgo.ms.constans.Constants;
 import com.mibanco.generarpdfriesgo.ms.dao.contract.impl.RiesgoConsultaDetalladaDaoImpl;
 import com.mibanco.generarpdfriesgo.ms.dao.entity.GenerarPdfRiesgoConsultaDetalladaEntity;
-import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
+import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ProcesarDatosXMLCommand;
 import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ValidarInformacionRenovacionCDTCommand;
 import com.mibanco.generarpdfriesgo.ms.services.contract.IGenerarPdfRiesgoConsultaDetallada;
-import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapper;
+import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapperGrpc;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ResponseConsultaUrlArchivoMasRecienteXmlOutput;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
 import io.quarkus.grpc.GrpcClient;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +27,10 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     public static final Logger LOG = LoggerFactory.getLogger(GenerarPdfRiesgoConsultaDetalladaImpl.class);
 
     @Inject
-    ValidarInformacionRenovacionCDTCommand command;
+    ValidarInformacionRenovacionCDTCommand comando;
+
+    @Inject
+    ProcesarDatosXMLCommand commandXML;
 
     @Inject
     RiesgoConsultaMapperGrpc mapperGrpc;
@@ -37,47 +42,48 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub serviceGrpc;
 
     @GrpcClient("clientearchivo")
-    ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub serviceArchivoGrpc;
+    ArchivoServiceGrpcGrpc.ArchivoServiceGrpcBlockingStub serviceArchivoGrpc;
 
     @Override
     public boolean generarRiesgoHistoricoEndeudamiento(String tipoDocumento, String numeroDocumento, String digitoVerificacion) {
+
         LOG.info("Inicia consulta Detallada de riesgo ");
+
         ConsultarUrlArchivoMasRecienteXmlInput data = ConsultarUrlArchivoMasRecienteXmlInput.newBuilder()
                 .setTipoDocumento(tipoDocumento)
                 .setNumeroDocumento(numeroDocumento)
                 .setDigitoVerificacion(digitoVerificacion)
                 .build();
-        LOG.info(serviceGrpc.toString());
-//        Boolean validacionCmd = (Boolean) command.execute(data);
 
-        if (true){
-            try{
+        Boolean command = (Boolean) comando.execute(data);
+
+        if (command) {
+            try {
+                LOG.info("Inicia consulta a clientehistorialconsultariesgo por GRPC");
                 ResponseConsultaUrlArchivoMasRecienteXmlOutput rptGrpc = serviceGrpc.consultarUrlArchivoMasRecienteXml(data);
-                System.out.println(rptGrpc);
+
+
+                LOG.info("Inicia consulta a clientearchivo por GRPC");
+                ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl(rptGrpc.getUrl().toString()).build();
+                Creado archivo = serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
+
+                commandXML.execute(archivo);
 
             } catch (Exception e) {
-                System.out.println("Error..." + e.getMessage());
+
+                LOG.error("Error en consulta a clientehistorialconsultariesgo por GRPC");
+                throw new ApplicationExceptionValidation(
+                        Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(), Constants.ERROR_SERVICIO + " generarRiesgoHistoricoEndeudamiento, error en consulta GRPC clientehistorialconsultariesgo"
+                );
             }
-
-//            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8088).build();
-//            ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub blockingStub
-//                    = ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.newBlockingStub(channel);
-
-//           HelloRequest request = HelloRequest.newBuilder().setName("Bard").build();
-//            ResponseConsultaUrlArchivoMasRecienteXmlOutput response = blockingStub.consultarUrlArchivoMasRecienteXml(data);
-
-//            ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl("www.test.com").build();
-//            Creado rptArchivo =  serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
-
-//            System.out.println(rptArchivo);
-//            System.out.println(response.getUrl());
-
-//            channel.shutdown();
-        }else{
-
-
+        } else {
+            LOG.warn("Commandos no ejecutados");
+            throw new ApplicationExceptionValidation(
+                    Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(), Constants.ERROR_SERVICIO + " generarRiesgoHistoricoEndeudamiento, error en commando"
+            );
         }
-        GenerarPdfRiesgoConsultaDetalladaEntity dataRiesgoConsulta = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(tipoDocumento,numeroDocumento,digitoVerificacion);
+
+        GenerarPdfRiesgoConsultaDetalladaEntity dataRiesgoConsulta = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(tipoDocumento, numeroDocumento, digitoVerificacion);
 
         LOG.info("Termina consulta Detallada de riesgo");
         return dataRiesgoConsulta != null;

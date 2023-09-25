@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.mibanco.archivo.us";
+
+package GuardarArchivoGrpc;
+
+service ArchivoServiceGrpc {
+  rpc actualizarArchivo(ArchivoGrpc) returns (Creado);
+  rpc consultarArchivoPorUbicacion(ArchivoByUrlGrpc) returns (Creado);
+  rpc descargarArchivo(ArchivoGrpc) returns (Creado);
+  rpc descargarArchivoPorUrl(ArchivoByUrlGrpc) returns (Creado);
+  rpc eliminarArchivo(ArchivoGrpc) returns (Creado);
+  rpc guardarArchivo(ArchivoGrpc) returns (Creado);
+}
+
+message Creado {
+  ArchivoGrpc Archivo = 1;
+}
+
+message Creado2 {
+  ArchivoByUrlGrpc ArchivoByUrl = 1;
+}
+
+message ArchivoGrpc {
+  string archivoID = 1;
+  string extensionArchivo = 2;
+  string nombreArchivo = 3;
+  string url = 4;
+  bool urlPublica = 5;
+  repeated bytes base64 = 6;
+}
+
+message ArchivoByUrlGrpc {
+  string url = 1;
+}

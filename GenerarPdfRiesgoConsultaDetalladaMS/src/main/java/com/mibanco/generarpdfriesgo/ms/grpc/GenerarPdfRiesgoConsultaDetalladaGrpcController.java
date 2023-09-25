@@ -36,13 +36,13 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
 
     @Override
     @Blocking
-    public void generarRiesgoHistoricoEndeudamiento(GenerarRiesgoConsultaDetalladaInput request, StreamObserver<ResponseGenerarRiesgoConsultaDetallada> responseObserver){
+    public void generarRiesgoHistoricoEndeudamiento(GenerarRiesgoConsultaDetalladaInput request, StreamObserver<ResponseGenerarRiesgoConsultaDetallada> responseObserver) {
 
         LOG.info("Inicia generacion de riesgo Historico por GRPC");
         try {
 
             validator.validarConsulta(request);
-            boolean rptService = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(),request.getNumeroDocumento(), request.getDigitoVerificacion());
+            boolean rptService = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(), request.getNumeroDocumento(), request.getDigitoVerificacion());
 
             ResponseGenerarRiesgoConsultaDetallada response = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(rptService).build();
             LOG.info("Finaliza generacion de riesgo Historico por GRPC");
