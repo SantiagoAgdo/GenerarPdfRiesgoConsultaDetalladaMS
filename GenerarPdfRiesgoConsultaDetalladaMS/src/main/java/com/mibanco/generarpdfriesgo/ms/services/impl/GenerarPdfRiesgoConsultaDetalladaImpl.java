@@ -51,19 +51,24 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
 //        Boolean validacionCmd = (Boolean) command.execute(data);
 
         if (true){
-            ResponseConsultaUrlArchivoMasRecienteXmlOutput rptGrpc = serviceGrpc.consultarUrlArchivoMasRecienteXml(data);
-            System.out.println(rptGrpc);
+            try{
+                ResponseConsultaUrlArchivoMasRecienteXmlOutput rptGrpc = serviceGrpc.consultarUrlArchivoMasRecienteXml(data);
+                System.out.println(rptGrpc);
+
+            } catch (Exception e) {
+                System.out.println("Error..." + e.getMessage());
+            }
 
 //            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8088).build();
 //            ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub blockingStub
 //                    = ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.newBlockingStub(channel);
-//
-////            HelloRequest request = HelloRequest.newBuilder().setName("Bard").build();
+
+//           HelloRequest request = HelloRequest.newBuilder().setName("Bard").build();
 //            ResponseConsultaUrlArchivoMasRecienteXmlOutput response = blockingStub.consultarUrlArchivoMasRecienteXml(data);
 
 //            ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl("www.test.com").build();
 //            Creado rptArchivo =  serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
-//
+
 //            System.out.println(rptArchivo);
 //            System.out.println(response.getUrl());
 

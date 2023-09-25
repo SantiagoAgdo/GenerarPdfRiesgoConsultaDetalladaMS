@@ -11,6 +11,7 @@ import io.grpc.Metadata;
 import io.grpc.Status;
 import io.grpc.StatusException;
 import io.grpc.stub.StreamObserver;
+import io.quarkus.grpc.GrpcClient;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.common.annotation.Blocking;
 import jakarta.inject.Inject;
@@ -29,6 +30,7 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
     @Inject
     RiesgoConsultaMapperGrpc mapper;
 
+
     @Inject
     GenerarPdfRiesgoConsultaDetalladaValidator validator;
 
@@ -38,6 +40,7 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
 
         LOG.info("Inicia generacion de riesgo Historico por GRPC");
         try {
+
             validator.validarConsulta(request);
             boolean rptService = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(),request.getNumeroDocumento(), request.getDigitoVerificacion());
 
