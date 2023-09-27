@@ -5,13 +5,11 @@ import com.mibanco.generarpdfriesgo.ms.GenerarRiesgoConsultaDetalladaInput;
 import com.mibanco.generarpdfriesgo.ms.ResponseGenerarRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
-import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapperGrpc;
 import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
 import io.grpc.Metadata;
 import io.grpc.Status;
 import io.grpc.StatusException;
 import io.grpc.stub.StreamObserver;
-import io.quarkus.grpc.GrpcClient;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.common.annotation.Blocking;
 import jakarta.inject.Inject;
@@ -28,10 +26,6 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
     GenerarPdfRiesgoConsultaDetalladaImpl service;
 
     @Inject
-    RiesgoConsultaMapperGrpc mapper;
-
-
-    @Inject
     GenerarPdfRiesgoConsultaDetalladaValidator validator;
 
     @Override
@@ -42,12 +36,12 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
         try {
 
             validator.validarConsulta(request);
-            boolean rptService = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(), request.getNumeroDocumento(), request.getDigitoVerificacion());
+            boolean respuestaServicio = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(), request.getNumeroDocumento(), request.getDigitoVerificacion());
 
-            ResponseGenerarRiesgoConsultaDetallada response = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(rptService).build();
+            ResponseGenerarRiesgoConsultaDetallada responseGrpc = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(respuestaServicio).build();
             LOG.info("Finaliza generacion de riesgo Historico por GRPC");
 
-            responseObserver.onNext(response);
+            responseObserver.onNext(responseGrpc);
             responseObserver.onCompleted();
 
         } catch (ApplicationExceptionValidation e) {
@@ -56,6 +50,7 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
             responseObserver.onError(statusException);
 
         } catch (Exception e) {
+
             StatusException statusException = responseExceptionGrpc(Status.INTERNAL, e.getMessage());
             responseObserver.onError(statusException);
         }

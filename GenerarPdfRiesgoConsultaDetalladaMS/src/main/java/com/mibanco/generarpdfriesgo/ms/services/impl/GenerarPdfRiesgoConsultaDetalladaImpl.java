@@ -11,7 +11,6 @@ import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ProcesarDatosX
 import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ValidarInformacionRenovacionCDTCommand;
 import com.mibanco.generarpdfriesgo.ms.services.contract.IGenerarPdfRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
-import com.mibanco.generarpdfriesgo.ms.utils.mappers.RiesgoConsultaMapperGrpc;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ResponseConsultaUrlArchivoMasRecienteXmlOutput;
 import io.quarkus.grpc.GrpcClient;
@@ -33,9 +32,6 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     ProcesarDatosXMLCommand commandXML;
 
     @Inject
-    RiesgoConsultaMapperGrpc mapperGrpc;
-
-    @Inject
     RiesgoConsultaDetalladaDaoImpl riesgoConsultaDetalladaDao;
 
     @GrpcClient("clientehistorialconsultariesgo")
@@ -49,25 +45,27 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
 
         LOG.info("Inicia consulta Detallada de riesgo ");
 
-        ConsultarUrlArchivoMasRecienteXmlInput data = ConsultarUrlArchivoMasRecienteXmlInput.newBuilder()
+        ConsultarUrlArchivoMasRecienteXmlInput dataRequest = ConsultarUrlArchivoMasRecienteXmlInput.newBuilder()
                 .setTipoDocumento(tipoDocumento)
                 .setNumeroDocumento(numeroDocumento)
                 .setDigitoVerificacion(digitoVerificacion)
                 .build();
 
-        Boolean command = (Boolean) comando.execute(data);
+        Boolean command = (Boolean) comando.execute(dataRequest);
 
         if (command) {
+
+            LOG.info("Inicia proceso de composicion");
+            LOG.info("=============================");
             try {
-                LOG.info("Inicia consulta a clientehistorialconsultariesgo por GRPC");
-                ResponseConsultaUrlArchivoMasRecienteXmlOutput rptGrpc = serviceGrpc.consultarUrlArchivoMasRecienteXml(data);
+                LOG.info("Inicia consulta a clienteHistorialConsultaRiesgo por GRPC");
+                ResponseConsultaUrlArchivoMasRecienteXmlOutput respuestaGRPCService = serviceGrpc.consultarUrlArchivoMasRecienteXml(dataRequest);
 
+                LOG.info("Inicia consulta a clienteArchivo por GRPC");
+                ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl(respuestaGRPCService.getUrl().toString()).build();
+                Creado repsonseArchivoGrpc = serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
 
-                LOG.info("Inicia consulta a clientearchivo por GRPC");
-                ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl(rptGrpc.getUrl().toString()).build();
-                Creado archivo = serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
-
-                commandXML.execute(archivo);
+                commandXML.execute(repsonseArchivoGrpc);
 
             } catch (Exception e) {
 
@@ -77,6 +75,7 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
                 );
             }
         } else {
+
             LOG.warn("Commandos no ejecutados");
             throw new ApplicationExceptionValidation(
                     Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(), Constants.ERROR_SERVICIO + " generarRiesgoHistoricoEndeudamiento, error en commando"
