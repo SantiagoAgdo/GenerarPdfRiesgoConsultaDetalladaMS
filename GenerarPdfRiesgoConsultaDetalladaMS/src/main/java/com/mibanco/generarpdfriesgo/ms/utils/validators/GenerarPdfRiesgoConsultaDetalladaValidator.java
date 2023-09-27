@@ -17,6 +17,8 @@ public class GenerarPdfRiesgoConsultaDetalladaValidator {
 
 
     public boolean validarConsulta(GenerarRiesgoConsultaDetalladaInput data) {
+
+        LOG.info("Inician Validaciones");
         if (data.getNumeroDocumento() == null) {
             throw new ApplicationExceptionValidation(
                     Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " numero de documento es nulo"
@@ -36,6 +38,8 @@ public class GenerarPdfRiesgoConsultaDetalladaValidator {
     }
 
     public boolean validarConsulta(TipoDocumentoEnum tipoDocumento, String numeroDocumento, String digitoVerificacion) {
+
+        LOG.info("Inician Validaciones");
         if (numeroDocumento == null) {
             throw new ApplicationExceptionValidation(
                     Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " numero de documento es nulo"
