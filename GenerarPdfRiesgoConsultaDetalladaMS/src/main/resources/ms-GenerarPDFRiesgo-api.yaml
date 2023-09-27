@@ -20,7 +20,7 @@ tags:
 #Endpoints de MS
 #----------------------------
 paths:
-  /v1/ms/centralRiesgo/generaRiesgoHistorial/pdf/{tipoDocumento}/{numeroDocumento}/{digitoVerificacion}:
+  /v1/ms/central-riesgo/detallada/pdf/{tipoDocumento}/{numeroDocumento}/{digitoVerificacion}:
     post:
       summary: Riesgo Historial
       operationId: generaRiesgoHistorial

@@ -4,7 +4,6 @@ import com.mibanco.generarpdfriesgo.ms.constans.Constants;
 import com.mibanco.generarpdfriesgo.ms.gen.contract.V1GenerarPdfRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
-import com.mibanco.generarpdfriesgo.ms.services.impl.PdfGeneratorService;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
@@ -12,9 +11,6 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.File;
-import java.io.IOException;
 
 public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDetallada {
 
