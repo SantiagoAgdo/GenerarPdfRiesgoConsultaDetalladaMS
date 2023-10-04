@@ -3,7 +3,6 @@ package com.mibanco.generarpdfriesgo.ms.utils.validators;
 import com.mibanco.generarpdfriesgo.ms.GenerarRiesgoConsultaDetalladaInput;
 import com.mibanco.generarpdfriesgo.ms.constans.Constants;
 import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
-import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.core.Response;

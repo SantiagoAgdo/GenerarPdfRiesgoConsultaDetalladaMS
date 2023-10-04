@@ -11,7 +11,6 @@ import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ProcesarDatosX
 import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ValidarInformacionRenovacionCDTCommand;
 import com.mibanco.generarpdfriesgo.ms.services.contract.IGenerarPdfRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
-import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ResponseConsultaUrlArchivoMasRecienteXmlOutput;
 import io.quarkus.grpc.GrpcClient;
