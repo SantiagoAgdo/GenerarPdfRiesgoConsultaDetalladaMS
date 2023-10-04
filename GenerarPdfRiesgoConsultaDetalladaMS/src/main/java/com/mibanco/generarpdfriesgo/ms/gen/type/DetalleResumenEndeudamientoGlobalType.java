@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 
 @JsonTypeName("DetalleResumenEndeudamientoGlobalType")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2023-09-25T12:00:45.198833-05:00[America/Bogota]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2023-10-03T17:19:31.615516-05:00[America/Bogota]")
 public class DetalleResumenEndeudamientoGlobalType   {
   private @Valid TIpoSectorXmlEnum sector;
   private @Valid Float comercialMiles;

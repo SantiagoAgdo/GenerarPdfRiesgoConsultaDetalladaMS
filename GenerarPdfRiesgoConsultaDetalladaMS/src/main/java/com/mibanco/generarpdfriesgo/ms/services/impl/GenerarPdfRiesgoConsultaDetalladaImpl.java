@@ -10,6 +10,7 @@ import com.mibanco.generarpdfriesgo.ms.dao.entity.GenerarPdfRiesgoConsultaDetall
 import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ProcesarDatosXMLCommand;
 import com.mibanco.generarpdfriesgo.ms.services.command.bussiness.ValidarInformacionRenovacionCDTCommand;
 import com.mibanco.generarpdfriesgo.ms.services.contract.IGenerarPdfRiesgoConsultaDetallada;
+import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ResponseConsultaUrlArchivoMasRecienteXmlOutput;
@@ -63,21 +64,21 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
 
                 LOG.info("Inicia consulta a clienteArchivo por GRPC");
                 ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl(respuestaGRPCService.getUrl().toString()).build();
-                Creado repsonseArchivoGrpc = serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
+                Creado responseArchivoGrpc = serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
 
-                commandXML.execute(repsonseArchivoGrpc);
+                commandXML.execute(responseArchivoGrpc);
 
             } catch (Exception e) {
 
                 LOG.error("Error en consulta a clientehistorialconsultariesgo por GRPC");
-                throw new ApplicationExceptionValidation(
+                throw new ApplicationException(
                         Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(), Constants.ERROR_SERVICIO + " generarRiesgoHistoricoEndeudamiento, error en consulta GRPC clientehistorialconsultariesgo"
                 );
             }
         } else {
 
             LOG.warn("Commandos no ejecutados");
-            throw new ApplicationExceptionValidation(
+            throw new ApplicationException(
                     Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(), Constants.ERROR_SERVICIO + " generarRiesgoHistoricoEndeudamiento, error en commando"
             );
         }
