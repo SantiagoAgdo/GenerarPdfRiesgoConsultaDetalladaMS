@@ -24,7 +24,7 @@ public class GenerarPdfRiesgoConsultaDetalladaValidator {
                     Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " numero de documento es nulo"
             );
         }
-        if (data.getDigitoVerificacion() == null) {
+        if (data.getDigitoVerificacion() == null || data.getDigitoVerificacion().length() > 2) {
             throw new ApplicationExceptionValidation(
                     Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " digito de verificacion es nulo"
             );
