@@ -6,22 +6,13 @@ option java_package = "com.mibanco.generarpdfriesgo.ms";
 package GenerarPdfRiesgoConsultaDetalladaGrpc;
 
 message GenerarPdfRiesgoConsultaDetallada {
-  ClienteBase cliente = 1;
-  CentralRiesgo centralRiesgo = 2;
+  CentralRiesgo centralRiesgo = 1;
 }
 
-message ClienteBase{
-  int32 numeroCliente = 1;
-  string primerNombre = 2;
-  string segundoNombre = 3;
-  string primerApellido = 4;
-  string segundoApellido = 5;
-  string tipoDocumento = 6;
-  string numeroDocumento = 7;
-  int32 fechaExpedicionDocumento = 8;
-  string tipoPersona = 9;
-  string correoElectronico = 10;
-  int32 numeroCelular = 11;
+message  HistoricoEndeudamientoType{
+    string resumenGeneral =1;
+    string   bancoConDeuda =2;
+    string   cuotasPorSector =3;
 }
 
 message CentralRiesgo{
@@ -236,9 +227,7 @@ message EndeudamientoActualTotal{
 }
 
 message GenerarRiesgoConsultaDetalladaInput{
-  string tipoDocumento = 1;
-  string numeroDocumento = 2;
-  string digitoVerificacion = 3;
+  string numeroCliente = 1;
 }
 
 message ResponseDataGenerarPdfRiesgoConsultaDetallada{

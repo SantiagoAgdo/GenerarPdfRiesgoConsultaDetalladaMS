@@ -35,8 +35,8 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
         LOG.info("Inicia generacion de riesgo Historico por GRPC");
         try {
 
-            validator.validarConsulta(request);
-            boolean respuestaServicio = service.generarRiesgoHistoricoEndeudamiento(request.getTipoDocumento(), request.getNumeroDocumento(), request.getDigitoVerificacion());
+            validator.validarConsulta(request.getNumeroCliente());
+            boolean respuestaServicio = service.generarRiesgoHistoricoEndeudamiento(request.getNumeroCliente());
 
             ResponseGenerarRiesgoConsultaDetallada responseGrpc = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(respuestaServicio).build();
             LOG.info("Finaliza generacion de riesgo Historico por GRPC");

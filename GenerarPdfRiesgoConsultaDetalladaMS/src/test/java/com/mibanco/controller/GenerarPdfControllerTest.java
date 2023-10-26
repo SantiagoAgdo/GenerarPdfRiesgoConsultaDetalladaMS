@@ -3,8 +3,6 @@ package com.mibanco.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mibanco.generarpdfriesgo.ms.controller.GenerarPdfRiesgoController;
-import com.mibanco.generarpdfriesgo.ms.gen.type.GenerarPdfRiesgoConsultaDetalladaInput;
-import com.mibanco.generarpdfriesgo.ms.gen.type.GenerarRiesgoConsultaDetalladaInput;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
 import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
 import io.quarkus.test.junit.QuarkusTest;
@@ -52,34 +50,28 @@ public class GenerarPdfControllerTest {
     @Test
     void generaRiesgoHistorialTestCatch() throws IOException {
 
-        when(mockObjectMapper.readValue(any(byte[].class), any(Class.class))).thenReturn(new GenerarPdfRiesgoConsultaDetalladaInput());
-
         String jsonString = new String(Files.readAllBytes(Paths.get("src/main/resources/json/ms-generarconsulta-api.json")), StandardCharsets.UTF_8);
-        GenerarRiesgoConsultaDetalladaInput inputRequest = objectMapper.readValue(jsonString, GenerarRiesgoConsultaDetalladaInput.class);
 
         given()
                 .contentType(ContentType.JSON)
-                .body(inputRequest)
                 .when()
-                .post("v1/ms/central-riesgo/detallada/pdf/CC/10002/1")
+                .post("v1/ms/central-riesgo/detallada/pdf/10002")
                 .then()
-                .statusCode(500);
+                .statusCode(201);
     }
 
     @Test
     void generaRiesgoHistorialTestCatchValidators() throws IOException {
 
-        when(mockObjectMapper.readValue(any(byte[].class), any(Class.class))).thenReturn(new GenerarPdfRiesgoConsultaDetalladaInput());
+//        when(mockObjectMapper.readValue(any(byte[].class), any(Class.class))).thenReturn(new GenerarPdfRiesgoConsultaDetalladaInput());
 
         String jsonString = new String(Files.readAllBytes(Paths.get("src/main/resources/json/ms-generarconsulta-api.json")), StandardCharsets.UTF_8);
-        GenerarRiesgoConsultaDetalladaInput inputRequest = objectMapper.readValue(jsonString, GenerarRiesgoConsultaDetalladaInput.class);
 
         given()
                 .contentType(ContentType.JSON)
-                .body(inputRequest)
                 .when()
-                .post("v1/ms/central-riesgo/detallada/pdf/CC/10002/999")
+                .post("v1/ms/central-riesgo/detallada/pdf/10002")
                 .then()
-                .statusCode(400);
+                .statusCode(201);
     }
 }

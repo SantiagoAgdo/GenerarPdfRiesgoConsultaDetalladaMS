@@ -16,43 +16,12 @@ public class GenerarPdfRiesgoConsultaDetalladaValidator {
     private static final Logger LOG = LoggerFactory.getLogger(GenerarPdfRiesgoConsultaDetalladaValidator.class);
 
 
-    public boolean validarConsulta(GenerarRiesgoConsultaDetalladaInput data) {
+    public boolean validarConsulta(String numeroCliente) {
 
         LOG.info("Inician Validaciones");
-        if (data.getNumeroDocumento() == null) {
+        if (numeroCliente.isEmpty() || numeroCliente == null) {
             throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " numero de documento es nulo"
-            );
-        }
-        if (data.getDigitoVerificacion() == null || data.getDigitoVerificacion().length() > 2) {
-            throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " digito de verificacion es nulo"
-            );
-        }
-        if (data.getTipoDocumento() == null) {
-            throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " tipo de documento es nulo"
-            );
-        }
-        return true;
-    }
-
-    public boolean validarConsulta(TipoDocumentoEnum tipoDocumento, String numeroDocumento, String digitoVerificacion) {
-
-        LOG.info("Inician Validaciones");
-        if (numeroDocumento == null) {
-            throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " numero de documento es nulo"
-            );
-        }
-        if (digitoVerificacion == null || digitoVerificacion.length() >2) {
-            throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " digito de verificacion es invalido"
-            );
-        }
-        if (tipoDocumento == null) {
-            throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " tipo de documento es nulo"
+                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " numero de documento invalido"
             );
         }
         return true;

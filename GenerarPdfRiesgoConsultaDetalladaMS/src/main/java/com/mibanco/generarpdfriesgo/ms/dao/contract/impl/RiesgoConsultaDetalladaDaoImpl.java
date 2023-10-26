@@ -12,11 +12,11 @@ import java.util.List;
 @ApplicationScoped
 public class RiesgoConsultaDetalladaDaoImpl implements RiesgoConsultaDetalladaDao {
     @Override
-    public GenerarPdfRiesgoConsultaDetalladaEntity generarRiesgoHistoricoEndeudamiento(String tipoDocumento, String numeroDocumento, String digitoVerificacion) {
-        return mockData(tipoDocumento,numeroDocumento,digitoVerificacion);
+    public GenerarPdfRiesgoConsultaDetalladaEntity generarRiesgoHistoricoEndeudamiento(String numeroCliente) {
+        return mockData(numeroCliente);
     }
 
-    private GenerarPdfRiesgoConsultaDetalladaEntity mockData(String tipoDocumento, String numeroDocumento, String digitoVerificacion){
+    private GenerarPdfRiesgoConsultaDetalladaEntity mockData(String numeroCliente){
 
         List<AnalisisVectorEntity> crearListaAnalisisVector = new ArrayList<>();
         List<EndeudamientoActualEntity> crearListaEndeudamientoActual = new ArrayList<>();

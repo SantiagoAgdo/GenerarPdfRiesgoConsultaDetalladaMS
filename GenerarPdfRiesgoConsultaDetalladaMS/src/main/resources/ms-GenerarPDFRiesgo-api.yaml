@@ -20,29 +20,17 @@ tags:
 #Endpoints de MS
 #----------------------------
 paths:
-  /v1/ms/central-riesgo/detallada/pdf/{tipoDocumento}/{numeroDocumento}/{digitoVerificacion}:
+  /v1/ms/central-riesgo/detallada/pdf/{numeroCliente}:
     post:
       summary: Riesgo Historial
       operationId: generaRiesgoHistorial
       parameters:
         - in: path
-          name: tipoDocumento
-          required: true
-          schema:
-            $ref: "#/components/schemas/TipoDocumentoEnum"
-          description: id catalogo
-        - in: path
-          name: numeroDocumento
+          name: numeroCliente
           required: true
           schema:
             type: string
-          description: Numero Documento
-        - in: path
-          name: digitoVerificacion
-          required: true
-          schema:
-            type: string
-          description: Digito Verificacion
+          description: Numero Cliente
       responses:
         "200":
           description: generate PDF.
@@ -73,14 +61,50 @@ paths:
 components:
   schemas:
     #    TYPES
-    generarRiesgoConsultaDetalladaInput:
+    ReporteCentralRiesgoType:
       type: object
       properties:
+        fechaConsulta:
+          type: string
         tipoDocumento:
           $ref: "#/components/schemas/TipoDocumentoEnum"
         numeroDocumento:
           type: string
+        estadoDocumento:
+          type: string
+        lugarExpedicion:
+          type: string
+        fechaExpedicion:
+          type: string
+          format: date-time
+        nombre:
+          type: string
+        rangoEdad:
+          type: string
+        genero:
+          type: string
+        tieneRUT:
+          type: boolean
+        antiguedadUbicacion:
+          type: string
         digitoVerificacion:
+          type: string
+        tipoRelacion:
+          $ref: "#/components/schemas/TipoRelacionEnum"
+        tipoReporte:
+          $ref: "#/components/schemas/TipoReporteXmlEnum"
+        historicoEndeudamiento:
+          $ref: "#/components/schemas/HistoricoEndeudamientoType"
+        consultaDetallada:
+          $ref: "#/components/schemas/ConsultaDetalladaType"
+    HistoricoEndeudamientoType:
+      type: object
+      properties:
+        resumenGeneral:
+          type: string
+        bancoConDeuda:
+          type: string
+        cuotasPorSector:
           type: string
     TipoDocumentoEnum:
       type: string
@@ -96,38 +120,6 @@ components:
         - RUT
         - TE
         - RUMC
-    generarPdfRiesgoConsultaDetalladaInput:
-      type: object
-      properties:
-        cliente:
-          $ref: "#/components/schemas/ClienteBaseType"
-        centralRiesgo:
-          $ref: "#/components/schemas/CentralRiesgoType"
-    ClienteBaseType:
-      type: object
-      properties:
-        numeroCliente:
-          type: integer
-        primerNombre:
-          type: string
-        segundoNombre:
-          type: string
-        primerApellido:
-          type: string
-        segundoApellido:
-          type: string
-        tipoDocumento:
-          $ref: "#/components/schemas/TipoDocumentoEnum"
-        numeroDocumento:
-          type: string
-        fechaExpedicionDocumento:
-          type: integer
-        tipoPersona:
-          $ref: "#/components/schemas/TipoPersonaEnum"
-        correoElectronico:
-          type: string
-        numeroCelular:
-          type: integer
     CentralRiesgoType:
       type: object
       properties:
@@ -167,15 +159,6 @@ components:
           type: boolean
         digitoVerificacion:
           type: string
-    #    HistoricoEndeudamientoType:
-    #      type: object
-    #      properties:
-    #        resumenGeneral:
-    #          type: array
-    #        bancoConDeuda:
-    #          type: array
-    #        cuotasPorSector:
-    #          type: array
     ConsultaDetalladaType:
       type: object
       properties:

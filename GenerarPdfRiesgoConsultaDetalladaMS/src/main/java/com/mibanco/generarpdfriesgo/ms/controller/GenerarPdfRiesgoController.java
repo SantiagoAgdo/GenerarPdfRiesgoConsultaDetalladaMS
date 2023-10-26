@@ -12,6 +12,9 @@ import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDetallada {
 
     public static final Logger LOG = LoggerFactory.getLogger(GenerarPdfRiesgoController.class);
@@ -24,14 +27,19 @@ public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDet
 
 
     @Override
-    public Response generaRiesgoHistorial(TipoDocumentoEnum tipoDocumento, String numeroDocumento, String digitoVerificacion) {
+    public Response generaRiesgoHistorial(String numeroCliente) {
         LOG.info("Inicia generaRiesgoHistorial en GenerarPdfRiesgoController");
         try {
-            validator.validarConsulta(tipoDocumento, numeroDocumento, digitoVerificacion);
-            service.generarRiesgoHistoricoEndeudamiento(tipoDocumento.toString(), numeroDocumento, digitoVerificacion);
+            validator.validarConsulta(numeroCliente);
+
+            service.generarRiesgoHistoricoEndeudamiento(numeroCliente);
+
+            List<Byte> responseConsultaDetallada = new ArrayList<>();
+            String responseTxt = "Historico Endeudamiento Generado";
+            responseConsultaDetallada.add(responseTxt.getBytes()[0]);
 
             LOG.info("Finaliza generaRiesgoHistorial en GenerarPdfRiesgoController");
-            return Response.status(Response.Status.CREATED).entity("Historico Endeudamiento Generado").build();
+            return Response.status(Response.Status.CREATED).entity(responseConsultaDetallada).build();
 
         } catch (ApplicationExceptionValidation e) {
 

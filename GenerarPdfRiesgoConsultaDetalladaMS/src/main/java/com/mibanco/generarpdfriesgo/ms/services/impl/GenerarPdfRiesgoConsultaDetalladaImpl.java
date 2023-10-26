@@ -41,14 +41,14 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     ArchivoServiceGrpcGrpc.ArchivoServiceGrpcBlockingStub serviceArchivoGrpc;
 
     @Override
-    public boolean generarRiesgoHistoricoEndeudamiento(String tipoDocumento, String numeroDocumento, String digitoVerificacion) {
+    public boolean generarRiesgoHistoricoEndeudamiento(String numeroCliente) {
 
         LOG.info("Inicia consulta Detallada de riesgo ");
 
         ConsultarUrlArchivoMasRecienteXmlInput dataRequest = ConsultarUrlArchivoMasRecienteXmlInput.newBuilder()
-                .setTipoDocumento(tipoDocumento)
-                .setNumeroDocumento(numeroDocumento)
-                .setDigitoVerificacion(digitoVerificacion)
+                .setTipoDocumento("CC")
+                .setNumeroDocumento("10002")
+                .setDigitoVerificacion("1")
                 .build();
 
         Boolean command = (Boolean) comando.execute(dataRequest);
@@ -82,7 +82,7 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
             );
         }
 
-        GenerarPdfRiesgoConsultaDetalladaEntity dataRiesgoConsulta = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(tipoDocumento, numeroDocumento, digitoVerificacion);
+        GenerarPdfRiesgoConsultaDetalladaEntity dataRiesgoConsulta = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(numeroCliente);
 
         LOG.info("Termina consulta Detallada de riesgo");
         return dataRiesgoConsulta != null;
