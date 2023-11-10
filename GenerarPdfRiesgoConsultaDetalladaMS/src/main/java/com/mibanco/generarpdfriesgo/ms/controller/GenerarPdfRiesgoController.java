@@ -1,8 +1,7 @@
 package com.mibanco.generarpdfriesgo.ms.controller;
 
-import com.mibanco.generarpdfriesgo.ms.constans.Constants;
+import com.mibanco.generarpdfriesgo.ms.constants.Constants;
 import com.mibanco.generarpdfriesgo.ms.gen.contract.V1GenerarPdfRiesgoConsultaDetallada;
-import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
@@ -29,29 +28,30 @@ public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDet
     @Override
     public Response generaRiesgoHistorial(String numeroCliente) {
         LOG.info("Inicia generaRiesgoHistorial en GenerarPdfRiesgoController");
+
         try {
             validator.validarConsulta(numeroCliente);
 
             service.generarRiesgoHistoricoEndeudamiento(numeroCliente);
 
             List<Byte> responseConsultaDetallada = new ArrayList<>();
-            String responseTxt = "Historico Endeudamiento Generado";
+            String responseTxt = "Histórico Endeudamiento Generado";
             responseConsultaDetallada.add(responseTxt.getBytes()[0]);
 
             LOG.info("Finaliza generaRiesgoHistorial en GenerarPdfRiesgoController");
             return Response.status(Response.Status.CREATED).entity(responseConsultaDetallada).build();
 
-        } catch (ApplicationExceptionValidation e) {
 
-            LOG.error("Error en validaciones de creacion de catalogo - CatalogoController");
+        } catch (ApplicationExceptionValidation e) {
+            LOG.error("Error en validaciones para generar histórico de endeudamiento - GenerarPdfRiesgoController");
             return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
 
         } catch (ApplicationException e) {
-
-            LOG.error(Constants.ERROR_SERVICIO + "crearClienteFIC en CatalogoServiceImpl exception: " + e.getMessage());
+            LOG.error(Constants.ERROR_SERVICIO + "generaRiesgoHistorial en GenerarPdfRiesgoController: " + e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
-                    .entity(Constants.ERROR_SERVICIO + "crearCatalogo, exception: " + e.getMessage()).build();
+                    .entity(Constants.ERROR_SERVICIO + "generaRiesgoHistorial, exception: " + e.getMessage()).build();
         }
     }
+
 
 }

@@ -3,6 +3,7 @@ package com.mibanco.generarpdfriesgo.ms.dao.entity;
 import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
 import com.mibanco.generarpdfriesgo.ms.gen.type.TipoRelacionEnum;
 import com.mibanco.generarpdfriesgo.ms.gen.type.TipoReporteXmlEnum;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@RegisterForReflection(targets = ConsultaDetalladaEntity.class)
 public class CentralRiesgoEntity {
 
     private String antiguedadUbicacion;

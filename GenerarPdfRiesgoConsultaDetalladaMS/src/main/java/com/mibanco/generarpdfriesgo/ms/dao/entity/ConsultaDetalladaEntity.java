@@ -1,5 +1,6 @@
 package com.mibanco.generarpdfriesgo.ms.dao.entity;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,19 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@RegisterForReflection(targets = {
+        AnalisisVectorEntity.class,
+        EndeudamientoActualEntity.class,
+        EndeudamientoGlobalEntity.class,
+        EvolucionDeudaEntity.class,
+        HabitoDePagoAbiertasEntity.class,
+        HabitoDePagoCerradasEntity.class,
+        HistoricoConsultaEntity.class,
+        PerfilSectorEntity.class,
+        PerfilSectorTotalEntity.class,
+        ResumenEndeudamientoGlobalEntity.class,
+        SaldosYMorasEntity.class}
+)
 public class ConsultaDetalladaEntity {
 
     private List<AnalisisVectorEntity> analisisVector;
@@ -23,4 +37,5 @@ public class ConsultaDetalladaEntity {
     private List<PerfilSectorTotalEntity> perfilSectorTotal;
     private List<ResumenEndeudamientoGlobalEntity> resumenEndeudamientoGlobal;
     private List<SaldosYMorasEntity> saldosYMoras;
+
 }

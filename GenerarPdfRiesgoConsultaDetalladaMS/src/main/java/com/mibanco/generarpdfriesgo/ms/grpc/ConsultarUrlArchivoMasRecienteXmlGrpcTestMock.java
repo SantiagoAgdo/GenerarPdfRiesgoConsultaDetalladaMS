@@ -21,37 +21,45 @@ public class ConsultarUrlArchivoMasRecienteXmlGrpcTestMock  extends ConsultarUrl
 
     @Override
     @Blocking
-    public void consultarUrlArchivoMasRecienteXml(ConsultarUrlArchivoMasRecienteXmlInput request, StreamObserver<ResponseConsultaUrlArchivoMasRecienteXmlOutput> responseObserver){
+    public void consultarUrlArchivoMasRecienteXml(ConsultarUrlArchivoMasRecienteXmlInput request, StreamObserver<ResponseConsultaUrlArchivoMasRecienteXmlOutput> responseObserver) {
+        LOG.info("Inicia consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
 
-        LOG.info("Inicia consultarUrlArchivoMasRecienteXml por GRPC Test MOCK");
         try {
-
             ResponseConsultaUrlArchivoMasRecienteXmlOutput response = ResponseConsultaUrlArchivoMasRecienteXmlOutput.newBuilder()
                     .setUrl("url1")
                     .build();
 
-            LOG.info("Finaliza consultarUrlArchivoMasRecienteXml por GRPC Test MOCK");
+            LOG.info("Finaliza consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
             responseObserver.onNext(response);
             responseObserver.onCompleted();
 
         } catch (ApplicationExceptionValidation e) {
-            LOG.error("Error de validaciones en consultarUrlArchivoMasRecienteXml  por GRPC Test MOCK");
-            responseObserver.onError(e);
+            handleGrpcException(responseObserver, e);
 
         } catch (Exception e) {
-            StatusException statusException = responseExceptionGrpc(Status.INTERNAL, e.getMessage());
+            handleGrpcException(responseObserver, e);
+        }
+    }
+
+    private void handleGrpcException(StreamObserver<?> responseObserver, Exception exception) {
+        LOG.error("Excepción: " + exception.getMessage());
+
+        if (exception instanceof ApplicationExceptionValidation) {
+            LOG.error("Error de validaciones en consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
+            responseObserver.onError(exception);
+        } else {
+            StatusException statusException = responseExceptionGrpc(Status.INTERNAL, exception.getMessage());
             responseObserver.onError(statusException);
         }
-
     }
 
     private StatusException responseExceptionGrpc(Status statusCode, String exceptionMessage) {
-
-        LOG.error("Exception: " + exceptionMessage);
+        LOG.error("Excepción: " + exceptionMessage);
 
         Metadata metadata = new Metadata();
         metadata.put(Metadata.Key.of("Error: ", Metadata.ASCII_STRING_MARSHALLER), exceptionMessage);
 
         return statusCode.asException(metadata);
     }
+
 }

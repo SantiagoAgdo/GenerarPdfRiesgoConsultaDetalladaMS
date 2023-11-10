@@ -1,4 +1,4 @@
-package com.mibanco.generarpdfriesgo.ms.constans;
+package com.mibanco.generarpdfriesgo.ms.constants;
 
 public class Constants {
 

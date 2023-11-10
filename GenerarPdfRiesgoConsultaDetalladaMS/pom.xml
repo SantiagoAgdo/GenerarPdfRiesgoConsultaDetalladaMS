@@ -183,7 +183,7 @@
                             <skipOverwrite>false</skipOverwrite>
                             <generateSupportingFiles>false</generateSupportingFiles>
                             <generateModels>true</generateModels>
-                            <inputSpec>src/main/resources/ms-GenerarPDFRiesgo-api.yaml</inputSpec>
+                            <inputSpec>src/main/resources/ms-generarpdfriesgo-api.yaml</inputSpec>
                             <apiNameSuffix>GenerarPdfRiesgoConsultaDetallada</apiNameSuffix>
                             <skipValidateSpec>true</skipValidateSpec>
                             <configOptions>

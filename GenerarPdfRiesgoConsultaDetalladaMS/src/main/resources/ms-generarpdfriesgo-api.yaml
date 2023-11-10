@@ -1,23 +1,23 @@
 openapi: 3.0.1
 servers:
-  - description: Index swagger
+  - description: Índice Swagger
     url: https://api.mibanco.com.co
 info:
-  description: Microservicio para generacion e PDF con consulta detallada de riesgo
+  description: Microservicio para generación de PDF con consulta detallada de riesgo.
   version: 0.0.1
-  title: GenrarPdfRiesgoConsultaDetallada_MS
+  title: GenerarPdfRiesgoConsultaDetallada_MS
   contact:
     name: MiBanco
     url: https://www.mibanco.com.co/
     email: api@mibanco.com.co
   license:
     name: GNU GPLv3
-    url: ‘https://www.gnu.org/licenses/gpl-3.0.html’
+    url: 'https://www.gnu.org/licenses/gpl-3.0.html'
 tags:
   - name: RiesgoConsultaDetallada
-    description: Generacion e PDF con consulta detallada de riesgo
+    description: Generación de PDF con consulta detallada de riesgo
 #----------------------------
-#Endpoints de MS
+# Endpoints de MS
 #----------------------------
 paths:
   /v1/ms/central-riesgo/detallada/pdf/{numeroCliente}:
@@ -30,24 +30,24 @@ paths:
           required: true
           schema:
             type: string
-          description: Numero Cliente
+          description: Número de Cliente
       responses:
         "200":
-          description: generate PDF.
+          description: Generar PDF exitoso.
           content:
             application/json:
               schema:
                 type: boolean
         "400":
-          description: Peticion con datos invalidos
+          description: Petición con datos inválidos
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
         "404":
-          description: "No se encontro datos de PDF"
+          description: "No se encontraron datos de PDF"
         default:
-          description: Unexpected error
+          description: Error inesperado
           content:
             application/json:
               schema:

@@ -13,30 +13,42 @@ import java.util.List;
 public class RiesgoConsultaDetalladaDaoImpl implements RiesgoConsultaDetalladaDao {
     @Override
     public GenerarPdfRiesgoConsultaDetalladaEntity generarRiesgoHistoricoEndeudamiento(String numeroCliente) {
-        return mockData(numeroCliente);
+        return createMockData(numeroCliente);
     }
 
-    private GenerarPdfRiesgoConsultaDetalladaEntity mockData(String numeroCliente){
-
-        List<AnalisisVectorEntity> crearListaAnalisisVector = new ArrayList<>();
-        List<EndeudamientoActualEntity> crearListaEndeudamientoActual = new ArrayList<>();
+    private GenerarPdfRiesgoConsultaDetalladaEntity createMockData(String numeroCliente) {
+        List<AnalisisVectorEntity> analisisVectorList = new ArrayList<>();
+        List<EndeudamientoActualEntity> endeudamientoActualList = new ArrayList<>();
         EndeudamientoActualTotalEntity endeudamientoActualTotal = new EndeudamientoActualTotalEntity();
-        List<EndeudamientoGlobalEntity> crearListaEndeudamientoGlobal = new ArrayList<>();
-        List<EvolucionDeudaEntity> crearListaEvolucionDeuda = new ArrayList<>();
-        List<HabitoDePagoAbiertasEntity> crearListaHabitoPagoAbiertas = new ArrayList<>();
-        List<HabitoDePagoCerradasEntity> crearListaHabitoPagoCerradas = new ArrayList<>();
-        List<HistoricoConsultaEntity> crearListaHistoricoConsulta = new ArrayList<>();
-        List<PerfilSectorEntity> crearListaPerfilSector = new ArrayList<>();
-        List<PerfilSectorTotalEntity> crearListaPerfilSectorTotal = new ArrayList<>();
-        List<ResumenEndeudamientoGlobalEntity> crearListaResumenEndeudamientoGlobal = new ArrayList<>();
-        List<SaldosYMorasEntity> crearListaSaldosYMoras = new ArrayList<>();
+        List<EndeudamientoGlobalEntity> endeudamientoGlobalList = new ArrayList<>();
+        List<EvolucionDeudaEntity> evolucionDeudaList = new ArrayList<>();
+        List<HabitoDePagoAbiertasEntity> habitoPagoAbiertasList = new ArrayList<>();
+        List<HabitoDePagoCerradasEntity> habitoPagoCerradasList = new ArrayList<>();
+        List<HistoricoConsultaEntity> historicoConsultaList = new ArrayList<>();
+        List<PerfilSectorEntity> perfilSectorList = new ArrayList<>();
+        List<PerfilSectorTotalEntity> perfilSectorTotalList = new ArrayList<>();
+        List<ResumenEndeudamientoGlobalEntity> resumenEndeudamientoGlobalList = new ArrayList<>();
+        List<SaldosYMorasEntity> saldosYMorasList = new ArrayList<>();
 
-        ConsultaDetalladaEntity consultaDetallada = new ConsultaDetalladaEntity(crearListaAnalisisVector, crearListaEndeudamientoActual, endeudamientoActualTotal, crearListaEndeudamientoGlobal, crearListaEvolucionDeuda, crearListaHabitoPagoAbiertas, crearListaHabitoPagoCerradas, crearListaHistoricoConsulta, crearListaPerfilSector, crearListaPerfilSectorTotal, crearListaResumenEndeudamientoGlobal, crearListaSaldosYMoras);
+        ConsultaDetalladaEntity consultaDetallada = new ConsultaDetalladaEntity(
+                analisisVectorList, endeudamientoActualList, endeudamientoActualTotal, endeudamientoGlobalList,
+                evolucionDeudaList, habitoPagoAbiertasList, habitoPagoCerradasList, historicoConsultaList,
+                perfilSectorList, perfilSectorTotalList, resumenEndeudamientoGlobalList, saldosYMorasList
+        );
 
-        ClienteBaseEntity  clienteBaseEntity = new ClienteBaseEntity(12345, "John", "Doe", "Smith", "Johnson", TipoDocumentoEnum.CC, "AB123456", 20220101, TipoPersonaEnum.JURIDICA, "john.doe@example.com", 5555555);
-        CentralRiesgoEntity centralRiesgo = new CentralRiesgoEntity("5 años", consultaDetallada, "Válido", new Date(), new Date(), "Masculino", "Bueno", "Ciudad", "123456789", "30-40", "Aprobado", true, TipoDocumentoEnum.CC, TipoRelacionEnum.CONYUGE, TipoReporteXmlEnum.CONSULTA_DETALLADA, true, "7");
+        ClienteBaseEntity clienteBaseEntity = new ClienteBaseEntity(
+                12345, "John", "Doe", "Smith", "Johnson", TipoDocumentoEnum.CC, "AB123456",
+                20220101, TipoPersonaEnum.JURIDICA, "john.doe@example.com", 5555555
+        );
+
+        CentralRiesgoEntity centralRiesgo = new CentralRiesgoEntity(
+                "5 años", consultaDetallada, "Válido", new Date(), new Date(), "Masculino", "Bueno",
+                "Ciudad", "123456789", "30-40", "Aprobado", true, TipoDocumentoEnum.CC,
+                TipoRelacionEnum.CONYUGE, TipoReporteXmlEnum.CONSULTA_DETALLADA, true, "7"
+        );
 
         return new GenerarPdfRiesgoConsultaDetalladaEntity(clienteBaseEntity, centralRiesgo);
     }
+
 
 }

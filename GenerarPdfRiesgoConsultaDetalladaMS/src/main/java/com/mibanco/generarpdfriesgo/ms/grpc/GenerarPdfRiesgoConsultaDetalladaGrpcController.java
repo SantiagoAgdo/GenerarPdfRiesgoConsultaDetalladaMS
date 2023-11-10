@@ -39,7 +39,7 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
             boolean respuestaServicio = service.generarRiesgoHistoricoEndeudamiento(request.getNumeroCliente());
 
             ResponseGenerarRiesgoConsultaDetallada responseGrpc = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(respuestaServicio).build();
-            LOG.info("Finaliza generacion de riesgo Historico por GRPC");
+            LOG.info("Finaliza generación de riesgo Historico por GRPC");
 
             responseObserver.onNext(responseGrpc);
             responseObserver.onCompleted();
@@ -58,7 +58,7 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
 
     private StatusException responseExceptionGrpc(Status statusCode, String exceptionMessage) {
 
-        LOG.error(exceptionMessage + "Exception: " + exceptionMessage);
+        LOG.error(exceptionMessage + "Excepción: " + exceptionMessage);
 
         Metadata metadata = new Metadata();
         metadata.put(Metadata.Key.of("Error: ", Metadata.ASCII_STRING_MARSHALLER), exceptionMessage);

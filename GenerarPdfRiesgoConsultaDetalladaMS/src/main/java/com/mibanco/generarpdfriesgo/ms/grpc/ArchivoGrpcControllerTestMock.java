@@ -27,8 +27,7 @@ public class ArchivoGrpcControllerTestMock extends ArchivoServiceGrpcGrpc.Archiv
     @Override
     @Blocking
     public void consultarArchivoPorUbicacion(ArchivoByUrlGrpc archivoByUrlGrpc, StreamObserver<Creado> responseObserver) {
-
-        LOG.info("Inicia consultarArchivoPorUbicacion grpc Test MOCK");
+        LOG.info("Inicia consultarArchivoPorUbicacion gRPC Test MOCK");
 
         try {
             ArchivoGrpc archivo = ArchivoGrpc.newBuilder()
@@ -41,23 +40,22 @@ public class ArchivoGrpcControllerTestMock extends ArchivoServiceGrpcGrpc.Archiv
 
             Creado response = Creado.newBuilder().setArchivo(archivo).build();
 
-            LOG.info("Termina consultarArchivoPorUbicacion grpc Test MOCK");
+            LOG.info("Termina consultarArchivoPorUbicacion gRPC Test MOCK");
             responseObserver.onNext(response);
             responseObserver.onCompleted();
 
         } catch (Exception e) {
-            StatusException statusException = responseExceptionGrpc(Status.INTERNAL, e.getMessage());
-            responseObserver.onError(statusException);
+            handleGrpcException(responseObserver, Status.INTERNAL, e.getMessage());
         }
     }
 
-    private StatusException responseExceptionGrpc(Status statusCode, String exceptionMessage) {
-
-        LOG.error("Exception: " + exceptionMessage);
+    private void handleGrpcException(StreamObserver<?> responseObserver, Status statusCode, String exceptionMessage) {
+        LOG.error("Excepción: " + exceptionMessage);
 
         Metadata metadata = new Metadata();
         metadata.put(Metadata.Key.of("Error: ", Metadata.ASCII_STRING_MARSHALLER), exceptionMessage);
 
-        return statusCode.asException(metadata);
+        responseObserver.onError(statusCode.asException(metadata));
     }
+
 }
