@@ -4,6 +4,7 @@ import com.mibanco.generarpdfriesgo.ms.ConsultarUrlArchivoMasRecienteXmlGrpcGrpc
 import com.mibanco.generarpdfriesgo.ms.GenerarRiesgoConsultaDetalladaInput;
 import com.mibanco.generarpdfriesgo.ms.ResponseGenerarRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
+import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
 import io.grpc.Metadata;
@@ -34,35 +35,31 @@ public class GenerarPdfRiesgoConsultaDetalladaGrpcController extends ConsultarUr
 
         LOG.info("Inicia generacion de riesgo Historico por GRPC");
         try {
-
             validator.validarConsulta(request.getNumeroCliente());
             boolean respuestaServicio = service.generarRiesgoHistoricoEndeudamiento(request.getNumeroCliente());
 
-            ResponseGenerarRiesgoConsultaDetallada responseGrpc = ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(respuestaServicio).build();
+            ResponseGenerarRiesgoConsultaDetallada response =
+                    ResponseGenerarRiesgoConsultaDetallada.newBuilder().setObj(respuestaServicio).build();
             LOG.info("Finaliza generación de riesgo Historico por GRPC");
 
-            responseObserver.onNext(responseGrpc);
+            responseObserver.onNext(response);
             responseObserver.onCompleted();
 
-        } catch (ApplicationExceptionValidation e) {
-
-            StatusException statusException = responseExceptionGrpc(Status.INVALID_ARGUMENT, e.getMessage());
-            responseObserver.onError(statusException);
+        } catch (ApplicationException e) {
+            handleGrpcException(responseObserver, Status.INVALID_ARGUMENT, e.getMessage());
 
         } catch (Exception e) {
-
-            StatusException statusException = responseExceptionGrpc(Status.INTERNAL, e.getMessage());
-            responseObserver.onError(statusException);
+            handleGrpcException(responseObserver, Status.INTERNAL, e.getMessage());
         }
     }
 
-    private StatusException responseExceptionGrpc(Status statusCode, String exceptionMessage) {
-
-        LOG.error(exceptionMessage + "Excepción: " + exceptionMessage);
+    private void handleGrpcException(StreamObserver<ResponseGenerarRiesgoConsultaDetallada> responseObserver,  Status status, String exceptionMessage) {
+        LOG.error("Excepción: " +  exceptionMessage);
 
         Metadata metadata = new Metadata();
         metadata.put(Metadata.Key.of("Error: ", Metadata.ASCII_STRING_MARSHALLER), exceptionMessage);
 
-        return statusCode.asException(metadata);
+        responseObserver.onError(status.asException(metadata));
     }
+
 }

@@ -50,12 +50,9 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
                 .setDigitoVerificacion("1")
                 .build();
 
-        Boolean commandResult = (Boolean) comando.execute(dataRequest);
+        if ((Boolean) comando.execute(dataRequest)) {
 
-        if (commandResult) {
             LOG.info("Inicia proceso de composición");
-            LOG.info("=============================");
-
             try {
                 LOG.info("Inicia consulta a clienteHistorialConsultaRiesgo por gRPC");
                 ResponseConsultaUrlArchivoMasRecienteXmlOutput respuestaGRPCService = serviceGrpc.consultarUrlArchivoMasRecienteXml(dataRequest);

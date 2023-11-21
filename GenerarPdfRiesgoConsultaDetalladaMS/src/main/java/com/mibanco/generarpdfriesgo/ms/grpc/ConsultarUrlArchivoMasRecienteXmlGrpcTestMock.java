@@ -1,5 +1,6 @@
 package com.mibanco.generarpdfriesgo.ms.grpc;
 
+import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlGrpcGrpc;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
@@ -15,26 +16,27 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @GrpcService
-public class ConsultarUrlArchivoMasRecienteXmlGrpcTestMock  extends ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcImplBase {
+public class ConsultarUrlArchivoMasRecienteXmlGrpcTestMock
+        extends ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcImplBase {
 
-    public static final Logger LOG = LoggerFactory.getLogger(ConsultarUrlArchivoMasRecienteXmlGrpcTestMock.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ConsultarUrlArchivoMasRecienteXmlGrpcTestMock.class);
 
     @Override
     @Blocking
     public void consultarUrlArchivoMasRecienteXml(ConsultarUrlArchivoMasRecienteXmlInput request, StreamObserver<ResponseConsultaUrlArchivoMasRecienteXmlOutput> responseObserver) {
-        LOG.info("Inicia consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
 
+        LOG.info("Inicia consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
         try {
-            ResponseConsultaUrlArchivoMasRecienteXmlOutput response = ResponseConsultaUrlArchivoMasRecienteXmlOutput.newBuilder()
-                    .setUrl("url1")
-                    .build();
+            ResponseConsultaUrlArchivoMasRecienteXmlOutput response =
+                    ResponseConsultaUrlArchivoMasRecienteXmlOutput.newBuilder().setUrl("url1").build();
 
             LOG.info("Finaliza consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
             responseObserver.onNext(response);
             responseObserver.onCompleted();
 
         } catch (ApplicationExceptionValidation e) {
-            handleGrpcException(responseObserver, e);
+            LOG.error("Error de validaciones en consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
+            responseObserver.onError(e);
 
         } catch (Exception e) {
             handleGrpcException(responseObserver, e);
@@ -43,6 +45,7 @@ public class ConsultarUrlArchivoMasRecienteXmlGrpcTestMock  extends ConsultarUrl
 
     private void handleGrpcException(StreamObserver<?> responseObserver, Exception exception) {
         LOG.error("Excepción: " + exception.getMessage());
+        exception.printStackTrace();
 
         if (exception instanceof ApplicationExceptionValidation) {
             LOG.error("Error de validaciones en consultarUrlArchivoMasRecienteXml por gRPC Test MOCK");
@@ -54,12 +57,11 @@ public class ConsultarUrlArchivoMasRecienteXmlGrpcTestMock  extends ConsultarUrl
     }
 
     private StatusException responseExceptionGrpc(Status statusCode, String exceptionMessage) {
-        LOG.error("Excepción: " + exceptionMessage);
+        LOG.error("Excepción: {}", exceptionMessage);
 
         Metadata metadata = new Metadata();
-        metadata.put(Metadata.Key.of("Error: ", Metadata.ASCII_STRING_MARSHALLER), exceptionMessage);
+        metadata.put(Metadata.Key.of("Error", Metadata.ASCII_STRING_MARSHALLER), exceptionMessage);
 
         return statusCode.asException(metadata);
     }
-
 }

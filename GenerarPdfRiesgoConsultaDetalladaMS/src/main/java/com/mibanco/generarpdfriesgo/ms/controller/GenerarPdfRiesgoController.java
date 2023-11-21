@@ -42,11 +42,11 @@ public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDet
             return Response.status(Response.Status.CREATED).entity(responseConsultaDetallada).build();
 
 
-        } catch (ApplicationExceptionValidation e) {
+        } catch (ApplicationException e) {
             LOG.error("Error en validaciones para generar histórico de endeudamiento - GenerarPdfRiesgoController");
             return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
 
-        } catch (ApplicationException e) {
+        } catch (Exception e) {
             LOG.error(Constants.ERROR_SERVICIO + "generaRiesgoHistorial en GenerarPdfRiesgoController: " + e.getMessage());
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                     .entity(Constants.ERROR_SERVICIO + "generaRiesgoHistorial, exception: " + e.getMessage()).build();

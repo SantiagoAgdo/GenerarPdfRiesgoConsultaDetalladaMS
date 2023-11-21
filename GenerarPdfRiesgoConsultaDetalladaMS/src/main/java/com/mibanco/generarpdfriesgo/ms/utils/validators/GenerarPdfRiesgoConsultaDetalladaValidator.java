@@ -19,7 +19,7 @@ public class GenerarPdfRiesgoConsultaDetalladaValidator {
         LOG.info("Inician Validaciones");
         if (numeroCliente.isEmpty() || numeroCliente == null) {
             throw new ApplicationExceptionValidation(
-                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " nímero de documento inválido"
+                    Response.Status.BAD_REQUEST.getStatusCode(), Constants.ERROR_SERVICIO + " número de documento inválido"
             );
         }
         return true;
