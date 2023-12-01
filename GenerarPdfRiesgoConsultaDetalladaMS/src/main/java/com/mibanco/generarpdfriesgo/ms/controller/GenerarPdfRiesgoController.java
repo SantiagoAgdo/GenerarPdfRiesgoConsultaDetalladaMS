@@ -3,6 +3,7 @@ package com.mibanco.generarpdfriesgo.ms.controller;
 import com.mibanco.generarpdfriesgo.ms.constants.Constants;
 import com.mibanco.generarpdfriesgo.ms.gen.contract.V1GenerarPdfRiesgoConsultaDetallada;
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
+import com.mibanco.generarpdfriesgo.ms.services.impl.PdfGeneratorService;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
@@ -24,22 +25,27 @@ public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDet
     @Inject
     GenerarPdfRiesgoConsultaDetalladaImpl service;
 
+    @Inject
+    PdfGeneratorService pdf;
+
 
     @Override
     public Response generaRiesgoHistorial(String numeroCliente) {
         LOG.info("Inicia generaRiesgoHistorial en GenerarPdfRiesgoController");
 
         try {
-            validator.validarConsulta(numeroCliente);
+//            validator.validarConsulta(numeroCliente);
+//
+//            service.generarRiesgoHistoricoEndeudamiento(numeroCliente);
+//
+//            List<Byte> responseConsultaDetallada = new ArrayList<>();
+//            String responseTxt = "Histórico Endeudamiento Generado";
+//            responseConsultaDetallada.add(responseTxt.getBytes()[0]);
 
-            service.generarRiesgoHistoricoEndeudamiento(numeroCliente);
-
-            List<Byte> responseConsultaDetallada = new ArrayList<>();
-            String responseTxt = "Histórico Endeudamiento Generado";
-            responseConsultaDetallada.add(responseTxt.getBytes()[0]);
+            pdf.generatePdf("/Users/santiagoagudelo/Documents/pdfpruebaa/generaRiesgoHistorial1222.pdf");
 
             LOG.info("Finaliza generaRiesgoHistorial en GenerarPdfRiesgoController");
-            return Response.status(Response.Status.CREATED).entity(responseConsultaDetallada).build();
+            return Response.status(Response.Status.CREATED).entity("oki doki").build();
 
 
         } catch (ApplicationException e) {
