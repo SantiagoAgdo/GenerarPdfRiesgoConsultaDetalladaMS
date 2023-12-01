@@ -1,6 +1,6 @@
 package com.mibanco.generarpdfriesgo.ms.services.command.bussiness;
 
-import com.mibanco.archivo.us.Creado;
+import com.mibanco.archivofic.us.ArchivoConsultado;
 import com.mibanco.generarpdfriesgo.ms.services.command.Command;
 import com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlInput;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -39,7 +39,7 @@ public class ValidarInformacionRenovacionCDTCommand implements Command {
     }
 
     @Override
-    public Object execute(Creado parametro) {
+    public Object execute(ArchivoConsultado parametro) {
         return null;
     }
 

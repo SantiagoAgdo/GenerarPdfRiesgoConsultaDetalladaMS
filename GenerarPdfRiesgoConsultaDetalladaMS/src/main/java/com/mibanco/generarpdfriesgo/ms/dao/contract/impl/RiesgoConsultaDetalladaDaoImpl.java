@@ -2,7 +2,10 @@ package com.mibanco.generarpdfriesgo.ms.dao.contract.impl;
 
 import com.mibanco.generarpdfriesgo.ms.dao.contract.RiesgoConsultaDetalladaDao;
 import com.mibanco.generarpdfriesgo.ms.dao.entity.*;
-import com.mibanco.generarpdfriesgo.ms.gen.type.*;
+import com.mibanco.generarpdfriesgo.ms.gen.type.TipoDocumentoEnum;
+import com.mibanco.generarpdfriesgo.ms.gen.type.TipoPersonaEnum;
+import com.mibanco.generarpdfriesgo.ms.gen.type.TipoRelacionEnum;
+import com.mibanco.generarpdfriesgo.ms.gen.type.TipoReporteXmlEnum;
 import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.ArrayList;

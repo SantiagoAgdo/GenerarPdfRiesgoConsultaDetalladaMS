@@ -5,15 +5,11 @@ import com.mibanco.generarpdfriesgo.ms.gen.contract.V1GenerarPdfRiesgoConsultaDe
 import com.mibanco.generarpdfriesgo.ms.services.impl.GenerarPdfRiesgoConsultaDetalladaImpl;
 import com.mibanco.generarpdfriesgo.ms.services.impl.PdfGeneratorService;
 import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationException;
-import com.mibanco.generarpdfriesgo.ms.utils.exceptions.ApplicationExceptionValidation;
 import com.mibanco.generarpdfriesgo.ms.utils.validators.GenerarPdfRiesgoConsultaDetalladaValidator;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDetallada {
 
@@ -36,7 +32,7 @@ public class GenerarPdfRiesgoController implements V1GenerarPdfRiesgoConsultaDet
         try {
 //            validator.validarConsulta(numeroCliente);
 //
-//            service.generarRiesgoHistoricoEndeudamiento(numeroCliente);
+            service.generarRiesgoHistoricoEndeudamiento(numeroCliente);
 //
 //            List<Byte> responseConsultaDetallada = new ArrayList<>();
 //            String responseTxt = "Histórico Endeudamiento Generado";

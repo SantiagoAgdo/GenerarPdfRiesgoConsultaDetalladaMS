@@ -2,7 +2,7 @@ package com.mibanco.generarpdfriesgo.ms.utils.xml;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import com.mibanco.archivo.us.Creado;
+import com.mibanco.archivofic.us.ArchivoConsultado;
 import lombok.Data;
 
 @Data
@@ -10,5 +10,5 @@ import lombok.Data;
 public class ProcesarDatosXML {
 
     @JacksonXmlProperty
-    private Creado centralRiesgoType;
+    private ArchivoConsultado centralRiesgoType;
 }

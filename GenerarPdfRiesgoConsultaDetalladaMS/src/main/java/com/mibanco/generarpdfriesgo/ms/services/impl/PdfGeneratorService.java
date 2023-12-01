@@ -4,7 +4,6 @@ import com.mibanco.generarpdfriesgo.ms.constants.Constants;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
-
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
@@ -20,7 +19,7 @@ import java.util.Base64;
 @ApplicationScoped
 public class PdfGeneratorService {
 
-    public void generatePdf(String outputPath) throws IOException {
+    public static void generatePdf(String outputPath) throws IOException {
 
         PDDocument document = new PDDocument();
         PDPage page = new PDPage(PDRectangle.A4);

@@ -1,9 +1,10 @@
 package com.mibanco.generarpdfriesgo.ms.services.impl;
 
 
-import com.mibanco.archivo.us.ArchivoByUrlGrpc;
-import com.mibanco.archivo.us.ArchivoServiceGrpcGrpc;
-import com.mibanco.archivo.us.Creado;
+
+import com.mibanco.archivofic.us.ArchivoConsultado;
+import com.mibanco.archivofic.us.ArchivoFicServiceGrpcGrpc;
+import com.mibanco.archivofic.us.Empty;
 import com.mibanco.generarpdfriesgo.ms.constants.Constants;
 import com.mibanco.generarpdfriesgo.ms.dao.contract.impl.RiesgoConsultaDetalladaDaoImpl;
 import com.mibanco.generarpdfriesgo.ms.dao.entity.GenerarPdfRiesgoConsultaDetalladaEntity;
@@ -32,13 +33,16 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     ProcesarDatosXMLCommand commandXML;
 
     @Inject
+    PdfGeneratorService pdfGeneratorService;
+
+    @Inject
     RiesgoConsultaDetalladaDaoImpl riesgoConsultaDetalladaDao;
 
     @GrpcClient("clientehistorialconsultariesgo")
     com.mibanco.historialconsultaclientecentralriesgo.es.ConsultarUrlArchivoMasRecienteXmlGrpcGrpc.ConsultarUrlArchivoMasRecienteXmlGrpcBlockingStub serviceGrpc;
 
     @GrpcClient("clientearchivo")
-    ArchivoServiceGrpcGrpc.ArchivoServiceGrpcBlockingStub serviceArchivoGrpc;
+    ArchivoFicServiceGrpcGrpc.ArchivoFicServiceGrpcBlockingStub  serviceArchivoGrpc;
 
     @Override
     public boolean generarRiesgoHistoricoEndeudamiento(String numeroCliente) {
@@ -58,10 +62,12 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
                 ResponseConsultaUrlArchivoMasRecienteXmlOutput respuestaGRPCService = serviceGrpc.consultarUrlArchivoMasRecienteXml(consultarUrlArchivoMasRecienteXmlInput);
 
                 LOG.info("Inicia consulta a clienteArchivo por gRPC");
-                ArchivoByUrlGrpc archivoByUrlGrpc = ArchivoByUrlGrpc.newBuilder().setUrl(respuestaGRPCService.getUrl().toString()).build();
-                Creado responseArchivoGrpc = serviceArchivoGrpc.consultarArchivoPorUbicacion(archivoByUrlGrpc);
+                Empty empty = Empty.newBuilder().build();
+                ArchivoConsultado responseArchivoGrpc = serviceArchivoGrpc.consultarArchivo(empty);
 
-                commandXML.execute(responseArchivoGrpc);
+//                commandXML.execute(responseArchivoGrpc);
+
+                PdfGeneratorService.generatePdf("test");
 
             } catch (Exception e) {
                 LOG.error("Error en consulta a clienteHistorialConsultaRiesgo por gRPC");
