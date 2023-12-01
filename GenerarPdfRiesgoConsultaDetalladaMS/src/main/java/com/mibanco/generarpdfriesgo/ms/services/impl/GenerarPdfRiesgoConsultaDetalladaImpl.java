@@ -44,22 +44,22 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
     public boolean generarRiesgoHistoricoEndeudamiento(String numeroCliente) {
         LOG.info("Inicia consulta Detallada de riesgo");
 
-        ConsultarUrlArchivoMasRecienteXmlInput dataRequest = ConsultarUrlArchivoMasRecienteXmlInput.newBuilder()
+        ConsultarUrlArchivoMasRecienteXmlInput consultarUrlArchivoMasRecienteXmlInput = ConsultarUrlArchivoMasRecienteXmlInput.newBuilder()
                 .setTipoDocumento("CC")
                 .setNumeroDocumento("10002")
                 .setDigitoVerificacion("1")
                 .build();
 
-        if ((Boolean) comando.execute(dataRequest)) {
+        if ((Boolean) comando.execute(consultarUrlArchivoMasRecienteXmlInput)) {
 
             LOG.info("Inicia proceso de composición");
             try {
                 LOG.info("Inicia consulta a clienteHistorialConsultaRiesgo por gRPC");
-                ResponseConsultaUrlArchivoMasRecienteXmlOutput respuestaGRPCService = serviceGrpc.consultarUrlArchivoMasRecienteXml(dataRequest);
+                ResponseConsultaUrlArchivoMasRecienteXmlOutput respuestaGRPCService = serviceGrpc.consultarUrlArchivoMasRecienteXml(consultarUrlArchivoMasRecienteXmlInput);
 
                 LOG.info("Inicia consulta a clienteArchivo por gRPC");
-                ArchivoByUrlGrpc url = ArchivoByUrlGrpc.newBuilder().setUrl(respuestaGRPCService.getUrl().toString()).build();
-                Creado responseArchivoGrpc = serviceArchivoGrpc.consultarArchivoPorUbicacion(url);
+                ArchivoByUrlGrpc archivoByUrlGrpc = ArchivoByUrlGrpc.newBuilder().setUrl(respuestaGRPCService.getUrl().toString()).build();
+                Creado responseArchivoGrpc = serviceArchivoGrpc.consultarArchivoPorUbicacion(archivoByUrlGrpc);
 
                 commandXML.execute(responseArchivoGrpc);
 
@@ -78,10 +78,10 @@ public class GenerarPdfRiesgoConsultaDetalladaImpl implements IGenerarPdfRiesgoC
             );
         }
 
-        GenerarPdfRiesgoConsultaDetalladaEntity dataRiesgoConsulta = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(numeroCliente);
+        GenerarPdfRiesgoConsultaDetalladaEntity generarPdfRiesgoConsultaDetalladaEntity = riesgoConsultaDetalladaDao.generarRiesgoHistoricoEndeudamiento(numeroCliente);
 
         LOG.info("Termina consulta Detallada de riesgo");
-        return dataRiesgoConsulta != null;
+        return generarPdfRiesgoConsultaDetalladaEntity != null;
     }
 
 
