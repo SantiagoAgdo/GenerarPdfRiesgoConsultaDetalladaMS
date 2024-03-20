@@ -1,0 +1,677 @@
+openapi: 3.0.1
+info:
+  description: API REST generar pdf historial crediticio
+  version: 1.0.0
+  title: API REST US generar pdf historial crediticio
+  contact:
+    name: MiBanco
+    url: https://www.mibanco.com.co/
+    email: api@mibanco.com.co
+  license:
+    name: GNU GPLv3
+    url: 'https://www.gnu.org/licenses/gpl-3.0.html'
+tags:
+  - name: Generar pdf historial crediticio
+    description: Api para generar pdf historial crediticio.
+#----------------------------
+#Endpoints del Entidad
+#----------------------------
+paths:
+  /v1/us/historial-credito/archivo/pdf:
+    post:
+      tags:
+        - Generar pdf historial crediticio.
+      operationId: generarPDFHistorialCreditoBaseArchivoXml
+      parameters:
+          - name: jwt
+            in: header
+            description: jwt
+            required: false
+            schema:
+              type: string
+      requestBody:
+        description: Generar pdf historial crediticio.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/historialCreditoBaseArchivoXmlInput"
+      responses:
+        "200":
+          description: Generar pdf historial crediticio.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/historialCreditoBaseArchivoXmlOutput"
+        "400":
+          description: Parámetros de entrada no válidos.
+        "404":
+          description: servicio no disponible.
+  /v1/us/historial-credito/base-xml/pdf/{requestInput}:
+    post:
+      tags:
+        - Generar pdf historial crediticio.
+      operationId: generarPDFHistorialCreditoBaseXml
+      parameters:
+        - name: jwt
+          in: header
+          description: jwt
+          required: false
+          schema:
+            type: string
+        - name: requestInput
+          in: path
+          description: requestInput
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Generar pdf historial crediticio.
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/historialCreditoBaseXmlInput"
+      responses:
+        "200":
+          description: Generar pdf historial crediticio.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/historialCreditoBaseXmlOutput"
+        "400":
+          description: Parámetros de entrada no válidos.
+        "404":
+          description: servicio no disponible.
+#---------------------------------------------
+#Se declaran los Modelos/Schemas del servicio
+#---------------------------------------------
+components:
+  schemas:
+    historialCreditoBaseArchivoXmlInput:
+      type: object
+      properties:
+        rutaXml:
+          type: string
+        nombreArchivoXml:
+          type: string
+    historialCreditoBaseArchivoXmlOutput:
+      type: object
+      properties:
+        datosBinarios:
+          type: string
+          format: byte
+    historialCreditoBaseXmlInput:
+      type: object
+      properties:
+        consecutivo:
+          type: string
+        xmlHistorial:
+          type: string
+    historialCreditoBaseXmlOutput:
+      type: object
+      properties:
+        informePDF:
+          type: string
+          format: byte
+    CalificacionCreditoYCarteraXmlEnum:
+      type: string
+      enum:
+        - A
+        - B
+        - C
+        - D
+        - E
+        - AA
+        - BB
+        - CC
+        - K
+        - --
+      x-enum-varnames:
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+        - _6
+        - _7
+        - _8
+        - _9
+        - _10
+    TipoDeCuentaEnum:
+      type: string
+      enum:
+        - CUENTA CORRIENTE BANCARIA
+        - CUENTA CORRIENTE DIGITAL
+        - TARJETAS DE CRÉDITO
+        - TARJETAS DE CRÉDITO DIGITAL
+        - CARTERA BANCARIA ROTATIVA
+        - CARTERA BANCARIA ROTATIVA DIGITAL
+        - MANTENIMIENTO  Y  REPARACIÓN  DE  VEHÍCULOS AUTOMOTORES
+        - COMERCIO DE PARTES, PIEZAS (AUTOPARTES) Y ACCESORIOS (LUJOS) PARA VEHÍCULOS AUTOMOTORES
+        - COMERCIO DE MOTOCICLETAS Y DE SUS PARTES, PIEZAS Y ACCESORIOS
+        - COMPAÑIAS LLANTERAS
+        - CARTERA BANCARIA
+        - CARTERA BANCARIA DIGITAL
+        - FINTECH
+        - COLECTIVA
+        - FIDUCIARIA
+        - LINEA VERDE - SOSTENIBLE
+        - FIDEICOMISO
+        - FINANCIACION MONEDA EXTRANJERA
+        - OFICIAL
+        - CART. COOP DE AHORRO Y CREDITO
+        - CARTERA CORPORAC. FINANCIERAS
+        - FOMENTO MUNICIPAL
+        - FOMENTO DEPARTAMENTAL
+        - FINAGRO
+        - CARTERA FONDOS DE EMPLEADOS
+        - CARTERA VESTUARIO
+        - CARTERA EDITORIAL
+        - PAGO EN ESPECIE
+        - PIGNORACION
+        - VENTA DE BIENES
+        - CORREO Y SERVICIOS DE MENSAJERÍA
+        - SERVICIOS MEDICOS
+        - ACTIVIDADES VETERINARIAS
+        - ALQUILER Y ARRENDAMIENTO DE OTROS TIPOS DE MAQUINARIA, EQUIPO Y BIENES TANGIBLES N.C.P.
+        - SERVICIOS FÚNEBRES Y ACTIVIDADES RELACIONADAS
+        - ASESORIAS
+        - CARTERA TURISMO
+        - RECREACIÓN
+        - CARTERA AHORRO Y VIVIENDA
+        - VIVIENDA NO VIS
+        - VIVIENDA PRIORITARIA
+        - VIVIENDA VIS
+        - CARTERA COMPANIAS DE LEASING
+        - LEASING HABITACIONAL NO  VIS
+        - LEASING HABITACIONAL VIS
+        - LEASING APALANCADO
+        - LEASING FINANCIERO
+        - LEASING INMOBILIARIO
+        - LEASING VEHICULAR
+        - LEASING OPERATIVO
+        - LEASING OTROS
+        - LEASE BACK
+        - CARTERA CRED. DE CONSTRUCCION
+        - CARTERA FINCA RAIZ
+        - ARRENDAMIENTO
+        - INVERSION NO VIS
+        - INVERSION VIS
+        - ESTATAL
+        - CARTERA C/IAS. FINANC. CIAL.
+        - REDESCUENTO
+        - FACTORING
+        - ORDINARIO
+        - CARTERA MOTOS
+        - CARTERA MOTOR DIGITAL
+        - CARTERA VEHICULO
+        - CARTERA VEHICULO DIGITAL
+        - CARTERA MUEBLES
+        - CARTERA COMPANIAS DE SEGUROS
+        - SEGUROS ACCIDENTES
+        - SEGUROS GENERALES
+        - SEGUROS HOGAR
+        - SEGUROS VEHICULO
+        - SEGUROS VIDA
+        - CREDITOS DE BAJO MONTO
+        - CARTERA ELECTRODOMESTICOS
+        - CARTERA TELEFONIA CELULAR
+        - SPLIT BILLING - CORPORATIVA
+        - CARTERA DE COMUNICACIONES
+        - HOGARES (TV, BANDA ANCHA, FIJO)
+        - CORPORATIVO (TV, BANDA ANCHA, FIJO)
+        - PYME (TV, BANDA ANCHA, FIJO)
+        - DEPARTAMENTO INFORM. COMERCIAL
+        - CARTERA COMISIONISTAS DE BOLSA
+        - CARTERA OTROS CREDITOS
+        - CARTERA SERVICIOS PUBLICOS
+        - SERVICIO AGUA
+        - SERVICIO LUZ
+        - SERVICIO GAS
+        - CARTERA AGROINDUSTRIA
+        - RURAL
+        - CARTERA DE ALIMENTOS
+        - CARTERA COMERCIALIZADORAS
+        - CARTERA CAJAS COMPENS. Y SALUD
+        - CARTERA DE EQUIPOS
+        - CARTERA FERRETERIAS
+        - CARTERA FUNDACIONES
+        - CARTERA GREMIOS
+        - CARTERA INDUSTRIAL
+        - CARTERA LABORATORIOS
+        - VENTA DIRECTA
+        - CARTERA LIBRANZA
+        - CARTERA LIBRANZA DIGITAL
+        - LIBRANZA EMPLEADOS
+        - LIBRANZA PENSIONADOS
+        - LIBRANZA ROTATIVA
+        - LIBRANZA COMPRA CARTERA
+        - CARTERA SEGURIDAD
+        - CARTERA TRANSPORTE
+        - CARTERA EDUCACION
+        - SERVICIOS FINANCIEROS
+        - CASAS DE COBRANZA
+        - CARTERA AUTOMOTRIZ
+        - CREDITOS DE CONSUMO
+        - ALMACEN POR DEPARTAMENTOS
+        - CARTERA SOBREGIRO
+        - CARTERA MICROCREDITO
+        - CUENTAS DE AHORRO BANCARIA
+        - CUENTAS DE AHORRO BANCARIA DIGITAL
+        - CDT
+      x-enum-varnames:
+        - CCB
+        - CCD
+        - TDC
+        - TDD
+        - CBR
+        - CRD
+        - CAM
+        - CAP
+        - CMO
+        - CAL
+        - CAB
+        - CBD
+        - FIT
+        - CBC
+        - CBF
+        - CLV
+        - CFI
+        - CME
+        - CBO
+        - CAC
+        - COF
+        - CFM
+        - CFD
+        - CFF
+        - CFE
+        - CVE
+        - CLB
+        - CPE
+        - CPG
+        - CVB
+        - CMS
+        - CSM
+        - CVT
+        - CAA
+        - CFU
+        - CAS
+        - CTU
+        - CTR
+        - CAV
+        - CVN
+        - CVP
+        - CVV
+        - CCL
+        - LNV
+        - LHV
+        - LAP
+        - LFI
+        - LIN
+        - LVE
+        - LOP
+        - LOT
+        - LBK
+        - CCC
+        - CFR
+        - CFA
+        - CIN
+        - CIV
+        - EST
+        - CCF
+        - CRE
+        - CFT
+        - COR
+        - CCM
+        - CMD
+        - CVH
+        - CVD
+        - CMU
+        - CCS
+        - SAC
+        - SGE
+        - SHO
+        - SVE
+        - SVI
+        - CBM
+        - CEL
+        - CTC
+        - CSB
+        - CDC
+        - CCH
+        - CCO
+        - CPY
+        - DIC
+        - CDB
+        - COC
+        - CSP
+        - CSU
+        - CSL
+        - CSG
+        - AGR
+        - RUR
+        - ALI
+        - CMZ
+        - CSA
+        - COM
+        - FER
+        - FUN
+        - GRM
+        - IND
+        - LAB
+        - CDI
+        - LBZ
+        - LBD
+        - LBE
+        - LBP
+        - LBR
+        - LBC
+        - SEG
+        - TRT
+        - EDU
+        - SFI
+        - SCC
+        - CAU
+        - CON
+        - APD
+        - SBG
+        - MCR
+    ClaseAhorroCorrienteXmlEnum:
+      type: string
+      enum:
+        - Normal
+        - Nomina
+        - GMF (Gravamen Movimiento Financiero)
+        - Nomina GMF
+        - Electrónica
+        - === AFC
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+    GaranteXmlEnum:
+      type: string
+      enum:
+        - Deudor Principal
+        - Codeudor
+        - Avalista
+        - Deudor solidario
+        - Coarrendatario
+        - Otros Garantes
+        - Fiador
+        - No Aplica
+        - Cotitular
+        - Comunal
+        - No Aplica
+      x-enum-varnames:
+        - _00
+        - _01
+        - _04
+        - _05
+        - _06
+        - _07
+        - _08
+        - _09
+        - _96
+        - _97
+        - _98
+    EstadoCorrienteAhorroXmlEnum:
+      type: string
+      enum:
+        - Activa
+        - Cancelada por mal manejo
+        - Desconocido
+        - Desconocido
+        - Saldada
+        - Embargada
+        - Embargada-Activa
+        - Inactiva
+      x-enum-varnames:
+        - _01
+        - _02
+        - _03
+        - _04
+        - _05
+        - _06
+        - _07
+        - _09
+    EstadoDeCuentaXmlEnum:
+      type: string
+      enum:
+        - Entidad no reporto
+        - Al día
+        - En Mora
+        - Pago Total
+        - Pago Judicial
+        - Dudoso Recaudo
+        - Castigada
+        - Dación en Pago
+        - Cancelada Voluntariamente
+        - Cancelada por mal manejo
+        - Prescripción
+        - Cancelada por la entidad
+        - Cancelada por reestructuración/refinanciación
+        - Cancelada por venta
+        - Insoluta
+        - Cancelada por siniestro
+        - Cancelada por Liquidación Patrimonial.
+        - Cancelada por subrogación
+      x-enum-varnames:
+        - _00
+        - _01
+        - _02
+        - _03
+        - _04
+        - _05
+        - _06
+        - _07
+        - _08
+        - _09
+        - _10
+        - _11
+        - _12
+        - _13
+        - _14
+        - _15
+        - _16
+        - _17
+    ClaseCreditoXmlEnum:
+      type: string
+      enum:
+        - No reportado
+        - Clásica
+        - Gold
+        - Platinum
+        - Otra
+        - Black
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+    FranquiciaCreditoXmlEnum:
+      type: string
+      enum:
+        - No reportado
+        - American Express
+        - Visa
+        - Master Card
+        - Diners
+        - Privada
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+    GatantiaXmlEnum:
+      type: string
+      enum:
+        - SIN GAR
+        - ADMIS
+        - OTR GAR
+        - NO IDON
+        - BIEN RAICES
+        - OTR PREND
+        - PIGN RENTA
+        - GAR SOBER NACION
+        - CONT IRREV FIDUC
+        - FNG
+        - CARTA CRÉD
+        - FAG
+        - PERSONAL
+        - BIEN LEASI NO INMOB
+        - BIEN LEASI INMOB
+        - PRENDA TITULO
+        - DEPOSITOS
+        - SEG CREDITO
+        - OTRAS GARANTÍAS IDÓNEAS
+        - NO IDÓNEA
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _A
+        - _B
+        - _C
+        - _D
+        - _E
+        - _F
+        - _G
+        - _H
+        - _I
+        - _J
+        - _K
+        - _L
+        - _M
+        - _N
+        - _O
+        - _P
+        - _Q
+    ModalidadPagoXmlEnum:
+      type: string
+      enum:
+        - No informó
+        - Mensual
+        - Bimensual
+        - Trimestral
+        - Semestral
+        - Anual
+        - Al vencimiento
+        - Otro
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+        - _6
+        - _9
+    ContratoObligacionXmlEnum:
+      type: string
+      enum:
+        - No reportado
+        - Definido
+        - Indefinido
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+    EstadoTitularEnum:
+      type: string
+      enum:
+        - Normal
+        - Concordato
+        - Liquidación Forzosa
+        - Liquidación Voluntaria
+        - Proceso de Reorganización
+        - Ley 550
+        - Ley 1116
+        - Otra
+        - Liquidación Patrimonial
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+        - _6
+        - _7
+        - _8
+    SectorXmlEnum:
+      type: string
+      enum:
+        - Financiero
+        - Cooperativo
+        - Real
+        - Telecomunicaciones
+      x-enum-varnames:
+        - _1
+        - _2
+        - _3
+        - _4
+    AdjetivoCreditoCarteraXmlEnum:
+      type: string
+      enum:
+        - No hay adjetivo
+        - Fallecido
+        - Cuenta en cobrador
+        - Deudor no localizado
+        - Línea suspendida
+        - Incapacidad total o permanente
+        - Cobro pre-jurídico
+        - Cobro jurídico
+      x-enum-varnames:
+        - _0
+        - _1
+        - _2
+        - _3
+        - _4
+        - _5
+        - _6
+        - _7
+    GarantiaDeudaGlobalXmlEnum:
+          type: string
+          enum:
+            - SIN GAR
+            - NO IDON
+            - BIEN RAICES
+            - OTR PREND
+            - PIGN RENTA
+            - GAR SOBER NACION
+            - CONT IRREV FIDUC
+            - FNG
+            - CARTA CRÉD
+            - OTR GAR
+            - FAG
+            - PERSONAL
+            - BIEN LEASI NO INMOB
+            - BIEN LEASI INMOB
+            - PRENDA TITULO
+            - DEPOSITOS
+            - SEG CREDITO
+          x-enum-varnames:
+            - _0
+            - _1
+            - _2
+            - _3
+            - _4
+            - _5
+            - _6
+            - _7
+            - _8
+            - _9
+            - _10
+            - _11
+            - _12
+            - _13
+            - _14
+            - _15
+            - _16

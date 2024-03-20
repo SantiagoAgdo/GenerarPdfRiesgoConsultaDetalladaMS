@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<Informes>
+    <Informe fechaConsulta="2023-11-30T15:00:46" respuesta="13" codSeguridad="6L61BHB" tipoIdDigitado="1" identificacionDigitada="1014275769" apellidoDigitado="PINZON">
+        <NaturalNacional nombres="GERMAN ANDRES" primerApellido="PINZON" segundoApellido="SIERRA" nombreCompleto="PINZON SIERRA GERMAN ANDRES" validada="true" rut="false">
+            <Identificacion estado="00" fechaExpedicion="2014-04-04" ciudad="BOGOTA D.C." departamento="CUNDINAMAR" numero="01014275769" />
+            <Edad min="22" max="28" />
+            <InfoDemografica>
+                <OperacionesInternacionales idRegistro="0" operaInt="false" fecha="2023-03-31" nitReporta="00811007713" razonSocial="SISTECREDITO S.A.S                                                                                  " />
+                <Identificacion idRegistro="0" fechaExpedicion="2014-04-04" lugarExpedicion="00000000" nitReporta="00811007713" razonSocial="SISTECREDITO S.A.S                                                                                  " />
+            </InfoDemografica>
+        </NaturalNacional>
+        <Score tipo="10" puntaje="0.0" clasificacion="N" fecha="2023-11-30" poblacion="0">
+            <Razon codigo="539" />
+        </Score>
+        <CuentaAhorro bloqueada="false" entidad="BANCOLOMBIA" numero="865111114" fechaApertura="2019-01-14" calificacion="1" situacionTitular="0" oficina="SIBERIA" ciudad="COTA" codigoDaneCiudad="25214000" tipoIdentificacion="2" identificacion="00890903938" sector="1">
+            <Caracteristicas clase="0" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="1" />
+            </Valores>
+            <Estado codigo="01" fecha="2023-09-30" />
+            <Llave>10101427576951023201865111114000000000</Llave>
+        </CuentaAhorro>
+        <CuentaAhorro bloqueada="false" entidad="BCO AVVILLAS" numero="111111117" fechaApertura="2019-06-05" calificacion="1" situacionTitular="0" oficina="UBATE" ciudad="BOGOTA D.C" codigoDaneCiudad="00000000" tipoIdentificacion="2" identificacion="00860035827" sector="1">
+            <Caracteristicas clase="0" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="1" />
+            </Valores>
+            <Estado codigo="09" fecha="2023-09-30" />
+            <Llave>10101427576951006001111111117000000000</Llave>
+        </CuentaAhorro>
+        <CuentaAhorro bloqueada="false" entidad="BCO DE BOGOTA" numero="664156301" fechaApertura="2017-09-29" situacionTitular="0" oficina="0660 ZIPAQUIRA" ciudad="ZIPAQUIRA" codigoDaneCiudad="25899000" tipoIdentificacion="2" identificacion="00860002964" sector="1">
+            <Caracteristicas clase="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" />
+            </Valores>
+            <Estado codigo="09" fecha="2023-09-30" />
+            <Llave>10101427576951002001664156301000000000</Llave>
+        </CuentaAhorro>
+        <CuentaAhorro bloqueada="false" entidad="DAVIPLATA      DAVIPLATA" numero="462199122" fechaApertura="2019-03-02" calificacion="1" situacionTitular="0" oficina="APP" ciudad="" codigoDaneCiudad="00000000" tipoIdentificacion="2" identificacion="00860034313" sector="1">
+            <Caracteristicas clase="4" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="1" />
+            </Valores>
+            <Estado codigo="01" fecha="2023-09-30" />
+            <Llave>10101427576951004701462199122000000000</Llave>
+        </CuentaAhorro>
+        <TarjetaCredito bloqueada="false" entidad="BANCOLOMBIA    AME. EXP." numero="037748962" fechaApertura="2022-09-30" fechaVencimiento="2026-09-30" comportamiento="NNNNNN----------------------------------------- " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="7" oficina="GUACHETA" ciudad="GUACHETA" codigoDaneCiudad="00000000" tipoIdentificacion="2" identificacion="00890903938" sector="1" calificacionHD="true">
+            <Caracteristicas franquicia="1" clase="4" marca="000" amparada="false" codigoAmparada="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-03-31" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="0.0" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2023-01-30" fechaLimitePago="2023-03-02" cupoTotal="0.0" />
+            </Valores>
+            <Estados>
+                <EstadoPlastico codigo="8" fecha="2023-11-30" />
+                <EstadoCuenta codigo="08" fecha="2023-03-31" />
+                <EstadoOrigen codigo="0" fecha="2022-09-30" />
+                <EstadoPago codigo="05" meses="48" fecha="2023-03-31" />
+            </Estados>
+            <Llave>10101427576902023402037748962000000000</Llave>
+        </TarjetaCredito>
+        <TarjetaCredito bloqueada="false" entidad="BANCOLOMBIA    MASTERCARD" numero="530361545" fechaApertura="2022-06-15" fechaVencimiento="2026-06-30" comportamiento="NNNNNNNNN-------------------------------------- " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="7" oficina="GUACHETA" ciudad="GUACHETA" codigoDaneCiudad="00000000" tipoIdentificacion="2" identificacion="00890903938" sector="1" calificacionHD="true">
+            <Caracteristicas franquicia="3" clase="2" marca="000" amparada="false" codigoAmparada="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-03-31" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="0.0" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2023-02-28" fechaLimitePago="2023-02-15" cupoTotal="0.0" />
+            </Valores>
+            <Estados>
+                <EstadoPlastico codigo="8" fecha="2023-11-30" />
+                <EstadoCuenta codigo="08" fecha="2023-03-31" />
+                <EstadoOrigen codigo="0" fecha="2022-06-15" />
+                <EstadoPago codigo="05" meses="48" fecha="2023-03-31" />
+            </Estados>
+            <Llave>10101427576902023302530361545000000000</Llave>
+        </TarjetaCredito>
+        <CuentaCartera bloqueada="false" entidad="BANCOLOMBIA" numero="211932131" fechaApertura="2023-03-22" fechaVencimiento="2028-05-22" comportamiento="NNNNNN----------------------------------------- " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="GUACHETA" ciudad="GUACHETA" codigoDaneCiudad="00000000" codSuscriptor="050232" tipoIdentificacion="2" identificacion="00890903938" sector="1" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CAB" tipoObligacion="2" tipoContrato="1" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="11285000.0" saldoMora="0.0" disponible="-1" cuota="539000.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2023-09-20" fechaLimitePago="2023-09-22" periodicidad="1" totalCuotas="62" valorInicial="11694000.0" cuotasCanceladas="5" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="01" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2023-03-22" />
+                <EstadoPago codigo="01" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576905023205211932131000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="BANCOLOMBIA" numero="211932132" fechaApertura="2023-03-22" fechaVencimiento="2025-03-22" comportamiento="NNNNNN----------------------------------------- " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="GUACHETA" ciudad="GUACHETA" codigoDaneCiudad="00000000" codSuscriptor="050232" tipoIdentificacion="2" identificacion="00890903938" sector="1" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CAB" tipoObligacion="2" tipoContrato="1" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="526000.0" saldoMora="0.0" disponible="-1" cuota="28000.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2023-09-21" fechaLimitePago="2023-09-22" periodicidad="1" totalCuotas="24" valorInicial="666000.0" cuotasCanceladas="5" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="01" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2023-03-22" />
+                <EstadoPago codigo="01" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576905023205211932132000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="Bancompartir   Finamerica" numero="152486681" fechaApertura="2022-07-29" fechaVencimiento="2024-02-12" comportamiento="NNNNNNNNNNNNNN--------------------------------- " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="UBATE" ciudad="VILLA DE SAN DIEGO D" codigoDaneCiudad="00000000" codSuscriptor="050127" tipoIdentificacion="2" identificacion="00860025971" sector="1" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CAB" tipoObligacion="5" tipoContrato="1" ejecucionContrato="5" mesesPermanencia="0" calidadDeudor="00" garantia="Q" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="3342000.0" saldoMora="0.0" disponible="-1" cuota="660000.0" cuotasMora="0" diasMora="0" periodicidad="1" totalCuotas="18" valorInicial="8000000.0" cuotasCanceladas="12" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="01" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2022-07-29" />
+                <EstadoPago codigo="01" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576905012705152486681000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="Bancompartir   Finamerica" numero="112021666" fechaApertura="2022-03-23" fechaVencimiento="2022-11-22" comportamiento="NNNN------------------------------------------- " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="UBATE" ciudad="VILLA DE SAN DIEGO D" codigoDaneCiudad="00000000" codSuscriptor="050127" tipoIdentificacion="2" identificacion="00860025971" sector="1" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CAB" tipoObligacion="5" tipoContrato="1" ejecucionContrato="5" mesesPermanencia="0" calidadDeudor="00" garantia="Q" />
+            <Valores>
+                <Valor moneda="1" fecha="2022-07-31" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="-1" cuota="0.0" cuotasMora="0" diasMora="0" periodicidad="1" totalCuotas="8" valorInicial="3000000.0" cuotasCanceladas="5" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="03" fecha="2022-07-31" />
+                <EstadoOrigen codigo="0" fecha="2022-03-23" />
+                <EstadoPago codigo="08" meses="48" fecha="2022-07-31" />
+            </Estados>
+            <Llave>10101427576905012705112021666000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="COOP DE AHORRO CREDIFLORES" numero="011111118" fechaApertura="2021-05-10" fechaVencimiento="2022-06-10" comportamiento="NNNNN------------------------------------------ " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="UBATE" ciudad="UBATE" codigoDaneCiudad="25843000" codSuscriptor="060031" tipoIdentificacion="2" identificacion="00860056869" sector="2" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CAC" tipoObligacion="2" tipoContrato="1" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2021-10-31" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="-1" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2021-10-21" fechaLimitePago="2021-12-10" periodicidad="4" totalCuotas="3" valorInicial="-1" cuotasCanceladas="3" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="03" fecha="2021-10-31" />
+                <EstadoOrigen codigo="0" fecha="2021-05-10" />
+                <EstadoPago codigo="08" meses="48" fecha="2021-10-31" />
+            </Estados>
+            <Llave>10101427576906003106011111118000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="CELYA SAS" numero="114780197" fechaApertura="2023-04-11" fechaVencimiento="2023-10-25" comportamiento="21NNN------------------------------------------ " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="0" situacionTitular="0" oficina="CELYA SAS" ciudad="BOGOTA" codigoDaneCiudad="00000000" codSuscriptor="180144" tipoIdentificacion="2" identificacion="00901279350" sector="3" calificacionHD="false">
+            <Caracteristicas tipoCuenta="CCF" tipoObligacion="2" tipoContrato="1" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="0" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="701000.0" saldoMora="594000.0" disponible="-1" cuota="39000.0" cuotasMora="15" diasMora="120" fechaPagoCuota="2023-06-14" fechaLimitePago="2023-06-21" periodicidad="9" totalCuotas="24" valorInicial="871000.0" cuotasCanceladas="5" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="02" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2023-04-11" />
+                <EstadoPago codigo="45" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576918014418114780197000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="CELYA SAS" numero="111588132" fechaApertura="2022-06-12" fechaVencimiento="2022-11-27" comportamiento="NN--------------------------------------------- " formaPago="1" probabilidadIncumplimiento="0.0" situacionTitular="0" oficina="CELYA SAS" ciudad="BOGOTA" codigoDaneCiudad="00000000" codSuscriptor="180144" tipoIdentificacion="2" identificacion="00901279350" sector="3" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CCF" tipoObligacion="1" tipoContrato="1" ejecucionContrato="1" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2022-11-30" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="-1" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2022-11-26" fechaLimitePago="2022-11-27" periodicidad="1" totalCuotas="24" valorInicial="1168000.0" cuotasCanceladas="24" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="03" fecha="2022-11-30" />
+                <EstadoOrigen codigo="0" fecha="2022-06-12" />
+                <EstadoPago codigo="08" meses="48" fecha="2022-11-30" />
+            </Estados>
+            <Llave>10101427576918014418111588132000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="SISTECREDITO" numero="130911111" fechaApertura="2023-03-01" fechaVencimiento="2023-08-01" comportamiento="4321NN----------------------------------------- " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="3" situacionTitular="0" oficina="MAS QUE MOTOS AKT" ciudad="VILLA DE SAN DIEGO D" codigoDaneCiudad="25843000" codSuscriptor="460020" tipoIdentificacion="2" identificacion="00811007713" sector="3" calificacionHD="false">
+            <Caracteristicas tipoCuenta="CON" tipoObligacion="1" tipoContrato="1" ejecucionContrato="1" mesesPermanencia="0" calidadDeudor="00" garantia="1" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="715000.0" saldoMora="715000.0" disponible="-1" cuota="182000.0" cuotasMora="4" diasMora="152" fechaLimitePago="2023-07-01" periodicidad="9" totalCuotas="5" valorInicial="913000.0" cuotasCanceladas="1" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="02" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2023-03-01" />
+                <EstadoPago codigo="20" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576946002046130911111000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="SISTECREDITO" numero="110611111" fechaApertura="2023-02-13" fechaVencimiento="2023-06-13" comportamiento="NNNN------------------------------------------- " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="RACING CALCAS" ciudad="VILLA DE SAN DIEGO D" codigoDaneCiudad="25843000" codSuscriptor="460020" tipoIdentificacion="2" identificacion="00811007713" sector="3" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CON" tipoObligacion="1" tipoContrato="1" ejecucionContrato="1" mesesPermanencia="0" calidadDeudor="00" garantia="1" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-06-30" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="-1" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2023-06-14" fechaLimitePago="2023-06-13" periodicidad="9" totalCuotas="4" valorInicial="308000.0" cuotasCanceladas="4" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="03" fecha="2023-06-20" />
+                <EstadoOrigen codigo="0" fecha="2023-02-13" />
+                <EstadoPago codigo="08" meses="48" fecha="2023-06-20" />
+            </Estados>
+            <Llave>10101427576946002046110611111000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="SISTECREDITO" numero="161511111" fechaApertura="2022-07-19" fechaVencimiento="2022-10-19" comportamiento="NNN-------------------------------------------- " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="MAS QUE MOTOS AKT" ciudad="VILLA DE SAN DIEGO D" codigoDaneCiudad="25843000" codSuscriptor="460020" tipoIdentificacion="2" identificacion="00811007713" sector="3" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CON" tipoObligacion="1" tipoContrato="1" ejecucionContrato="1" mesesPermanencia="0" calidadDeudor="00" garantia="1" />
+            <Valores>
+                <Valor moneda="1" fecha="2022-10-31" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="-1" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2022-10-18" periodicidad="9" totalCuotas="4" valorInicial="327000.0" cuotasCanceladas="4" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="03" fecha="2022-10-31" />
+                <EstadoOrigen codigo="0" fecha="2022-07-19" />
+                <EstadoPago codigo="08" meses="48" fecha="2022-10-31" />
+            </Estados>
+            <Llave>10101427576946002046161511111000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="COLOMBIA MOVIL" numero="574364185" fechaApertura="2020-11-14" fechaVencimiento="2040-12-31" comportamiento="NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN------------- " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="0" situacionTitular="0" oficina="PRINCIPAL" ciudad="BOGOTA" codigoDaneCiudad="00000000" codSuscriptor="230026" tipoIdentificacion="2" identificacion="00830114921" sector="4" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CTC" tipoObligacion="2" tipoContrato="2" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="0.0" cuota="0.0" cuotasMora="0" diasMora="0" fechaPagoCuota="2023-06-14" periodicidad="1" totalCuotas="-1" valorInicial="-1" cuotasCanceladas="-1" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="01" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2020-11-14" />
+                <EstadoPago codigo="01" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576923002623574364185000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="COMCEL S.A." numero="882320912" fechaApertura="2023-05-27" fechaVencimiento="2023-07-06" comportamiento="NNNN------------------------------------------- " formaPago="0" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="" ciudad="" codigoDaneCiudad="00000000" codSuscriptor="230004" tipoIdentificacion="2" identificacion="00800153993" sector="4" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CTC" tipoObligacion="2" tipoContrato="1" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2023-09-30" calificacion="-" saldoActual="76000.0" saldoMora="0.0" disponible="0.0" cuota="0.0" cuotasMora="0" diasMora="0" periodicidad="1" totalCuotas="-1" valorInicial="-1" cuotasCanceladas="-1" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="01" fecha="2023-09-30" />
+                <EstadoOrigen codigo="0" fecha="2023-09-30" />
+                <EstadoPago codigo="01" meses="48" fecha="2023-09-30" />
+            </Estados>
+            <Llave>10101427576923000423882320912000000000</Llave>
+        </CuentaCartera>
+        <CuentaCartera bloqueada="false" entidad="COMCEL S.A." numero="429977118" fechaApertura="2017-09-16" fechaVencimiento="2017-11-09" comportamiento="---------------------------------------NN------ " formaPago="1" probabilidadIncumplimiento="0.0" calificacion="1" situacionTitular="0" oficina="" ciudad="" codigoDaneCiudad="00000000" codSuscriptor="230004" tipoIdentificacion="2" identificacion="00800153993" sector="4" calificacionHD="true">
+            <Caracteristicas tipoCuenta="CTC" tipoObligacion="2" tipoContrato="1" ejecucionContrato="2" mesesPermanencia="0" calidadDeudor="00" garantia="2" />
+            <Valores>
+                <Valor moneda="1" fecha="2021-02-28" calificacion="-" saldoActual="0.0" saldoMora="0.0" disponible="0.0" cuota="0.0" cuotasMora="0" diasMora="0" periodicidad="1" totalCuotas="-1" valorInicial="-1" cuotasCanceladas="-1" />
+            </Valores>
+            <Estados>
+                <EstadoCuenta codigo="03" fecha="2021-02-28" />
+                <EstadoOrigen codigo="0" fecha="2021-02-28" />
+                <EstadoPago codigo="08" meses="48" fecha="2021-02-28" />
+            </Estados>
+            <Llave>10101427576923000423429977118000000000</Llave>
+        </CuentaCartera>
+        <EndeudamientoGlobal calificacion="A" fuente="S" saldoPendiente="4417000" tipoCredito="MIC" moneda="ML" numeroCreditos="1" independiente="" fechaReporte="2023-06-30">
+            <Entidad nombre="BANCO COMPARTIR S.A          0" nit="00860025971" sector="1" />
+            <Garantia tipo="0" valor="0.0" />
+            <Llave>1010142757692023063001000062LCAO</Llave>
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="-" fuente="DC" saldoPendiente="12360000" tipoCredito="CNS" moneda="MC" numeroCreditos="4" independiente="" fechaReporte="2023-03-31">
+            <Entidad nombre="BANCOLOMBIA" nit="00890903938" sector="1 " />
+            <Garantia tipo="9" valor="-1" />
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="A" fuente="S" saldoPendiente="5737000" tipoCredito="MIC" moneda="ML" numeroCreditos="1" independiente="" fechaReporte="2023-03-31">
+            <Entidad nombre="BANCO COMPARTIR S.A          0" nit="00860025971" sector="1" />
+            <Garantia tipo="0" valor="0.0" />
+            <Llave>1010142757692023033101000062LCAO</Llave>
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="-" fuente="DC" saldoPendiente="11763000" tipoCredito="CNS" moneda="MC" numeroCreditos="2" independiente="" fechaReporte="2022-12-31">
+            <Entidad nombre="BANCOLOMBIA    AME. EXP." nit="00890903938" sector="1 " />
+            <Garantia tipo="9" valor="-1" />
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="-" fuente="DC" saldoPendiente="38000" tipoCredito="CNS" moneda="MC" numeroCreditos="1" independiente="" fechaReporte="2023-06-30">
+            <Entidad nombre="COMCEL S.A." nit="00800153993" sector="4 " />
+            <Garantia tipo="9" valor="-1" />
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="-" fuente="DC" saldoPendiente="718000" tipoCredito="CNS" moneda="ML" numeroCreditos="2" independiente="" fechaReporte="2023-06-30">
+            <Entidad nombre="SISTECREDITO" nit="00811007713" sector="3 " />
+            <Garantia tipo="9" valor="-1" />
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="-" fuente="DC" saldoPendiente="1144000" tipoCredito="CNS" moneda="MC" numeroCreditos="2" independiente="" fechaReporte="2023-03-31">
+            <Entidad nombre="SISTECREDITO" nit="00811007713" sector="3 " />
+            <Garantia tipo="9" valor="-1" />
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="A" fuente="S" saldoPendiente="6926000" tipoCredito="MIC" moneda="ML" numeroCreditos="1" independiente="" fechaReporte="2022-12-31">
+            <Entidad nombre="BANCO COMPARTIR S.A          0" nit="00860025971" sector="1" />
+            <Garantia tipo="0" valor="0.0" />
+            <Llave>1010142757692022123101000062LCAO</Llave>
+        </EndeudamientoGlobal>
+        <EndeudamientoGlobal calificacion="-" fuente="DC" saldoPendiente="12290000" tipoCredito="CNS" moneda="MC" numeroCreditos="2" independiente="" fechaReporte="2023-06-30">
+            <Entidad nombre="BANCOLOMBIA" nit="00890903938" sector="1 " />
+            <Garantia tipo="9" valor="-1" />
+        </EndeudamientoGlobal>
+        <Consulta fecha="2023-10-26" tipoCuenta="CBR" entidad="BANCOMPARTIR   ROTATIVO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00860025971" sector="1">
+            <Llave>10101427576902</Llave>
+        </Consulta>
+        <Consulta fecha="2023-09-25" tipoCuenta="CBR" entidad="BANCOMPARTIR   ROTATIVO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00860025971" sector="1">
+            <Llave>10101427576906</Llave>
+        </Consulta>
+        <Consulta fecha="2023-08-28" tipoCuenta="CBR" entidad="BANCOMPARTIR   ROTATIVO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00860025971" sector="1">
+            <Llave>10101427576905</Llave>
+        </Consulta>
+        <Consulta fecha="2023-07-25" tipoCuenta="CBR" entidad="BANCOMPARTIR   ROTATIVO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00860025971" sector="1">
+            <Llave>10101427576904</Llave>
+        </Consulta>
+        <Consulta fecha="2023-06-23" tipoCuenta="CBR" entidad="BANCOMPARTIR   ROTATIVO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00860025971" sector="1">
+            <Llave>10101427576903</Llave>
+        </Consulta>
+        <Consulta fecha="2023-06-14" tipoCuenta="CBM" entidad="NEQUI          BAJO MONTO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00890903938" sector="1">
+            <Llave>10101427576901</Llave>
+        </Consulta>
+        <Consulta fecha="2023-05-25" tipoCuenta="CBR" entidad="BANCOMPARTIR   ROTATIVO" oficina="------------------" ciudad="------------" razon="00" cantidad="01" nitSuscriptor="00860025971" sector="1">
+            <Llave>10101427576907</Llave>
+        </Consulta>
+        <RespuestaPersonalizada>
+            <Linea consecutivo="01">[ACIERTA_MASTER][539][TIPO_CONSULTA][1]</Linea>
+            <Linea consecutivo="02">[MONTO_MINIMO][200000][TIPO_ID][1]</Linea>
+            <Linea consecutivo="03">[ENDEUDAMIENTO][14.32][SALDO_MORA_SF][0.51]</Linea>
+            <Linea consecutivo="04">[PORCENTAJE_END_DESEMBOLSOS_3M][0][CREDITOS_ULTIMO_TRIM][0]</Linea>
+            <Linea consecutivo="05">[CREDITOS_ULTIMO_TRIM_COD][0][CREDITOS_TOTAL_COD][0]</Linea>
+            <Linea consecutivo="06">[CONTEO_ENTIDADES][3][ESTADO_DOCUMENTO][0]</Linea>
+            <Linea consecutivo="07">[CUENTAS_MARCACION_NEG][0][CUENTAS_ABIERTAS_1M][0]</Linea>
+            <Linea consecutivo="08">[CHEQUES_DEVUELTOS][0][ESTADOS_DESCALIFICANTES_TDC][0]</Linea>
+            <Linea consecutivo="09">[MORA_VIGENTE_TDC][0][MORA_6M_TDC_A][0]</Linea>
+            <Linea consecutivo="10">[MORA_6M_TDC_AP][0][MORA_6M_TDC_N][0]</Linea>
+            <Linea consecutivo="11">[UTILIZACION_TDC][0][MODO_EXTINCION_R][0]</Linea>
+            <Linea consecutivo="12">[MODO_EXTINCION_AP][0][ESTADOS_DESCALIFICANTES][1]</Linea>
+            <Linea consecutivo="13">[MORA_VIGENTE_SF][1][MORA_6M_SF_A][0]</Linea>
+            <Linea consecutivo="14">[MORA_6M_SF_AP][2][MORA_6M_SF_N][0]</Linea>
+            <Linea consecutivo="15">[ESTADOS_DESCALIFICANTES_SA][0][MORA_VIGENTE_SA][0]</Linea>
+            <Linea consecutivo="16">[MORA_6M_SA_A][0][MORA_6M_SA_AP][0]</Linea>
+            <Linea consecutivo="17">[ESTADOS_DESCALIFICANTES_SRS][0][VALOR_MORA_FR][0]</Linea>
+            <Linea consecutivo="18">[MORAS_VIGENTE_FR][0][MORAS_6M_FR][0]</Linea>
+            <Linea consecutivo="19">[MORAS_VIGENTE_OT][1][MORAS_6M_OT][1]</Linea>
+            <Linea consecutivo="20">[ESTADOS_DESCALIFICANTES_SRC][0][MORA_VIGENTE_SRC][0]</Linea>
+            <Linea consecutivo="21">[CONTEO_RECHAZO][3][CONTEO_ALERTAS_POTENCIALES][0]</Linea>
+            <Linea consecutivo="22">[CONTEO_ALERTAS][0][ALERTA_AP1][0]</Linea>
+            <Linea consecutivo="23">[ALERTA_AP2][0][ALERTA_AP3][0]</Linea>
+            <Linea consecutivo="24">[ALERTA_AP4][0][ALERTA_AP5][0]</Linea>
+            <Linea consecutivo="25">[ALERTA_AP6][0][ALERTA_AP7][0]</Linea>
+            <Linea consecutivo="26">[ALERTA_AP8][0][ALERTA_AP9][0]</Linea>
+            <Linea consecutivo="27">[ALERTA_AP10][0][ALERTA_AP11][0]</Linea>
+            <Linea consecutivo="28">[ALERTA_AP12][0][ALERTA_AP13][0]</Linea>
+            <Linea consecutivo="29">[ALERTA_AP14][0][ALERTA_AP15][0]</Linea>
+            <Linea consecutivo="30">[ALERTA_AP16][0][ALERTA_AP17][0]</Linea>
+            <Linea consecutivo="31">[ALERTA_AP18][0][ALERTA_AP19][0]</Linea>
+            <Linea consecutivo="32">[ALERTA_AP20][0][ALERTA_A1][0]</Linea>
+            <Linea consecutivo="33">[ALERTA_A2][0][ALERTA_A3][0]</Linea>
+            <Linea consecutivo="34">[ALERTA_A4][0][ALERTA_A5][0]</Linea>
+            <Linea consecutivo="35">[ALERTA_A6][0][ALERTA_A7][0]</Linea>
+            <Linea consecutivo="36">[ALERTA_A10][0][ALERTA_A11][0]</Linea>
+            <Linea consecutivo="37">[ALERTA_A12][0][ALERTA_A13][0]</Linea>
+            <Linea consecutivo="38">[VAR_MORA_6M_TDC][0][VAR_MORA_3M_TDC_N][0]</Linea>
+            <Linea consecutivo="39">[VAR_MORA_HIST6M_TDC][0][TIPO_CLIENTE][0]</Linea>
+            <Linea consecutivo="40">[MODO_EXTINCION_TDC][0][MODO_EXTINCION_FIN][0]</Linea>
+            <Linea consecutivo="41">[MODO_EXTINCION_OT][0][MODO_EXTINCION_SRC][0]</Linea>
+            <Linea consecutivo="42">[MORA_6M_FIN][1][MORA_HIST6M_FIN][0]</Linea>
+            <Linea consecutivo="43">[MORA_3M_FIN_N][1][MORA_6M_SA_N][0]</Linea>
+            <Linea consecutivo="44">[MONTO_SOLICITADO][2000000][RECHAZO_1][0]</Linea>
+            <Linea consecutivo="45">[RECHAZO_2][0][RECHAZO_3][0]</Linea>
+            <Linea consecutivo="46">[RECHAZO_4][1][RECHAZO_5][0]</Linea>
+            <Linea consecutivo="47">[RECHAZO_6][0][ALERTA_A8][0]</Linea>
+            <Linea consecutivo="48">[ALERTA_A9][0][ALERTA_A14][0]</Linea>
+            <Linea consecutivo="49">[ALERTA_AP21][0][CONTEO_APROBADO][0]</Linea>
+            <Linea consecutivo="50">[PI_ACIERTA_MASTER_FIN][9.67][MORA_6M_SRC][0]</Linea>
+            <Linea consecutivo="51">[MORA_3M_SA_N][0][EXPERIENCIA_MESES][29]</Linea>
+            <Linea consecutivo="52">[EXPERIENCIA_MI_BANCO][0][MORA_MAX_12M][11]</Linea>
+            <Linea consecutivo="53">[RESPUESTA][N.A][RESPUESTA_ACIERTA_MASTER][NA]</Linea>
+            <Linea consecutivo="54">[RESPUESTA_POLITICA][NO_ADMISIBLE][CAUSAL_R1][-]</Linea>
+            <Linea consecutivo="55">[CAUSAL_R2][-][CAUSAL_R3][-]</Linea>
+            <Linea consecutivo="56">[CAUSAL_R4][Estados descalificantes sector financiero, leasing, fiduciarias o solidario][CAUSAL_R5][-]</Linea>
+            <Linea consecutivo="57">[CAUSAL_R6][-][CAUSAL_AP1][-]</Linea>
+            <Linea consecutivo="58">[CAUSAL_AP2][-][CAUSAL_AP3][-]</Linea>
+            <Linea consecutivo="59">[CAUSAL_AP4][-][CAUSAL_AP5][-]</Linea>
+            <Linea consecutivo="60">[CAUSAL_AP6][-][CAUSAL_AP7][-]</Linea>
+            <Linea consecutivo="61">[CAUSAL_AP8][-][CAUSAL_AP9][-]</Linea>
+            <Linea consecutivo="62">[CAUSAL_AP10][-][CAUSAL_AP11][-]</Linea>
+            <Linea consecutivo="63">[CAUSAL_AP12][-][CAUSAL_AP13][-]</Linea>
+            <Linea consecutivo="64">[CAUSAL_AP14][-][CAUSAL_AP15][-]</Linea>
+            <Linea consecutivo="65">[CAUSAL_AP16][-][CAUSAL_AP17][-]</Linea>
+            <Linea consecutivo="66">[CAUSAL_AP18][-][CAUSAL_AP19][-]</Linea>
+            <Linea consecutivo="67">[CAUSAL_AP20][-][CAUSAL_A1][-]</Linea>
+            <Linea consecutivo="68">[CAUSAL_A2][-][CAUSAL_A3][-]</Linea>
+            <Linea consecutivo="69">[CAUSAL_A4][-][CAUSAL_A5][-]</Linea>
+            <Linea consecutivo="70">[CAUSAL_A6][-][CAUSAL_A7][-]</Linea>
+            <Linea consecutivo="71">[CAUSAL_A8][-][CAUSAL_A9][-]</Linea>
+            <Linea consecutivo="72">[CAUSAL_A10][-][CAUSAL_A11][-]</Linea>
+            <Linea consecutivo="73">[CAUSAL_A12][-][CAUSAL_A13][-]</Linea>
+            <Linea consecutivo="74">[CAUSAL_A14][-][MOTIVO][-]</Linea>
+            <Linea consecutivo="75">[DECISION][N.A][PEOR_CALIFICACION_FIN][A]</Linea>
+            <Linea consecutivo="76">[PEOR_CALIFICACION_SA][Otro][CAUSAL][N.A. Respuesta en construcción]</Linea>
+            <Linea consecutivo="77">[ZONA][ZONA BOGOTA SUR][SEGMENTO][MICROEMPRESAS]</Linea>
+            <Linea consecutivo="78">[CAUSAL_AP21][-][RECHAZO_7][1]</Linea>
+            <Linea consecutivo="79">[RECHAZO_8][1][RECHAZO_9][0]</Linea>
+            <Linea consecutivo="80">[RECHAZO_10][0][CAUSAL_R7][Mora vigente sector financiero]</Linea>
+            <Linea consecutivo="81">[CAUSAL_R8][Mora historica sector financiero][CAUSAL_R9][-]</Linea>
+            <Linea consecutivo="82">[CAUSAL_R10][-][SALDO_ENDEUDAMIENTO][16564800]</Linea>
+            <Linea consecutivo="83">[NIVEL_ENDEUDAMIENTO][0.18612][ACTIVOS][89000000]</Linea>
+            <Linea consecutivo="84">[ACTIVIDAD][TIENDA][CLUSTER][1]</Linea>
+            <Linea consecutivo="85">[APLICA_CC][NO]</Linea>
+        </RespuestaPersonalizada>
+        <InfoAgregada>
+            <Resumen>
+                <Principales creditoVigentes="7" creditosCerrados="8" creditosActualesNegativos="2" histNegUlt12Meses="2" cuentasAbiertasAHOCCB="2" cuentasCerradasAHOCCB="2" consultadasUlt6meses="6" desacuerdosALaFecha="0" antiguedadDesde="2017-09-16" reclamosVigentes="0" />
+                <Saldos saldoTotalEnMora="1309.0" saldoM30="0.0" saldoM60="0.0" saldoM90="1309.0" cuotaMensual="1448.0" saldoCreditoMasAlto="11285.0" saldoTotal="16645.0">
+                    <Sector sector="1" saldo="15153.0" participacion="91.03634725142685" />
+                    <Sector sector="2" saldo="0.0" participacion="0.0" />
+                    <Sector sector="3" saldo="1416.0" participacion="8.50705917693001" />
+                    <Sector sector="4" saldo="76.0" participacion="0.4565935716431361" />
+                    <Mes fecha="2023-09-30" saldoTotalMora="1309000" saldoTotal="16645000" />
+                    <Mes fecha="2023-08-30" saldoTotalMora="1152000" saldoTotal="16962000" />
+                    <Mes fecha="2023-07-30" saldoTotalMora="772000" saldoTotal="17539000" />
+                    <Mes fecha="2023-06-30" saldoTotalMora="171000" saldoTotal="17342000" />
+                    <Mes fecha="2023-05-30" saldoTotalMora="171000" saldoTotal="18336000" />
+                    <Mes fecha="2023-04-30" saldoTotalMora="0" saldoTotal="18440000" />
+                    <Mes fecha="2023-03-30" saldoTotalMora="0" saldoTotal="19057000" />
+                    <Mes fecha="2023-02-28" saldoTotalMora="0" saldoTotal="17818000" />
+                    <Mes fecha="2023-01-28" saldoTotalMora="0" saldoTotal="17578000" />
+                    <Mes fecha="2022-12-28" saldoTotalMora="0" saldoTotal="18427000" />
+                    <Mes fecha="2022-11-28" saldoTotalMora="0" saldoTotal="18868000" />
+                    <Mes fecha="2022-10-28" saldoTotalMora="0" saldoTotal="15340000" />
+                    <Mes fecha="2022-09-28" saldoTotalMora="0" saldoTotal="13039000" />
+                    <Mes fecha="2022-08-28" saldoTotalMora="0" saldoTotal="12420000" />
+                    <Mes fecha="2022-07-28" saldoTotalMora="0" saldoTotal="4023000" />
+                    <Mes fecha="2022-06-28" saldoTotalMora="0" saldoTotal="1975000" />
+                    <Mes fecha="2022-05-28" saldoTotalMora="0" saldoTotal="2331000" />
+                    <Mes fecha="2022-04-28" saldoTotalMora="0" saldoTotal="2668000" />
+                    <Mes fecha="2022-03-28" saldoTotalMora="0" saldoTotal="3000000" />
+                    <Mes fecha="2022-02-28" saldoTotalMora="0" saldoTotal="0" />
+                    <Mes fecha="2022-01-28" saldoTotalMora="0" saldoTotal="0" />
+                    <Mes fecha="2021-12-28" saldoTotalMora="0" saldoTotal="0" />
+                    <Mes fecha="2021-11-28" saldoTotalMora="0" saldoTotal="0" />
+                    <Mes fecha="2021-10-28" saldoTotalMora="0" saldoTotal="0" />
+                </Saldos>
+                <Comportamiento>
+                    <Mes fecha="2023-09-30" comportamiento="C" cantidad="2" />
+                    <Mes fecha="2023-08-30" comportamiento="4" cantidad="2" />
+                    <Mes fecha="2023-07-30" comportamiento="3" cantidad="2" />
+                    <Mes fecha="2023-06-30" comportamiento="2" cantidad="1" />
+                    <Mes fecha="2023-05-30" comportamiento="1" cantidad="1" />
+                    <Mes fecha="2023-04-30" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2023-03-30" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2023-02-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2023-01-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-12-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-11-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-10-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-09-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-08-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-07-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-06-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-05-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-04-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-03-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-02-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2022-01-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2021-12-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2021-11-28" comportamiento="N" cantidad="0" />
+                    <Mes fecha="2021-10-28" comportamiento="N" cantidad="0" />
+                </Comportamiento>
+            </Resumen>
+            <Totales>
+                <TipoCuenta codigoTipo="CCF" tipo="Cartera c/ias. financ. cial." calidadDeudor="Principal" cupo="871.0" saldo="701.0" saldoMora="594.0" cuota="39.0" />
+                <TipoCuenta codigoTipo="CAB" tipo="Cartera bancaria" calidadDeudor="Principal" cupo="20360.0" saldo="15153.0" saldoMora="0.0" cuota="1227.0" />
+                <TipoCuenta codigoTipo="CTC" tipo="Cartera telefonía celular" calidadDeudor="Principal" cupo="0.0" saldo="76.0" saldoMora="0.0" cuota="0.0" />
+                <TipoCuenta codigoTipo="CON" tipo="Créditos de consumo" calidadDeudor="Principal" cupo="913.0" saldo="715.0" saldoMora="715.0" cuota="182.0" />
+                <Total calidadDeudor="Principal" participacion="100.0" cupo="22144.0" saldo="16645.0" saldoMora="1309.0" cuota="1448.0" />
+                <Total calidadDeudor="Codeudor" participacion="0.0" cupo="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" />
+            </Totales>
+            <ComposicionPortafolio>
+                <TipoCuenta tipo="AHO" calidadDeudor="Principal" porcentaje="1.0" cantidad="2">
+                    <Estado codigo="Activa" cantidad="2" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CAB" calidadDeudor="Principal" porcentaje="1.0" cantidad="3">
+                    <Estado codigo="Al dia" cantidad="3" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CCF" calidadDeudor="Principal" porcentaje="1.0" cantidad="1">
+                    <Estado codigo="Cart. castigada" cantidad="1" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CON" calidadDeudor="Principal" porcentaje="1.0" cantidad="1">
+                    <Estado codigo="Esta en mora 120" cantidad="1" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CTC" calidadDeudor="Principal" porcentaje="1.0" cantidad="2">
+                    <Estado codigo="Al dia" cantidad="2" />
+                </TipoCuenta>
+            </ComposicionPortafolio>
+            <Cheques />
+            <EvolucionDeuda>
+                <Trimestre fecha="2023-09-01" cuota="1468666" cupoTotal="22144000" saldo="17048666" porcentajeUso="0.7699000481695569" score="0.0" calificacion="C" aperturaCuentas="0" cierreCuentas="2" totalAbiertas="9" totalCerradas="10" moraMaxima="M 120" mesesMoraMaxima="4" />
+                <Trimestre fecha="2023-06-01" cuota="1206999" cupoTotal="22452000" saldo="18052333" porcentajeUso="0.8040412138488033" score="0.0" calificacion="C" aperturaCuentas="0" cierreCuentas="1" totalAbiertas="11" totalCerradas="8" moraMaxima="M 60" mesesMoraMaxima="2" />
+                <Trimestre fecha="2023-03-01" cuota="1517000" cupoTotal="17087666" saldo="14716666" porcentajeUso="0.8612449524998539" score="0.0" calificacion="C" aperturaCuentas="5" cierreCuentas="2" totalAbiertas="12" totalCerradas="7" moraMaxima="M 0" mesesMoraMaxima="0" />
+                <AnalisisPromedio cuota="-3.2" cupoTotal="29.6" saldo="15.8" porcentajeUso="-9.134490433029697" score="0.0" calificacion="0" aperturaCuentas="-100.0" cierreCuentas="0.0" totalAbiertas="-25.0" totalCerradas="42.857142857142854" moraMaxima="120" />
+            </EvolucionDeuda>
+            <HistoricoSaldos>
+                <TipoCuenta tipo="CAB">
+                    <Trimestre fecha="2023-09-01" totalCuentas="3" cuentasConsideradas="3" saldo="15581000" />
+                    <Trimestre fecha="2023-06-01" totalCuentas="3" cuentasConsideradas="3" saldo="17170333" />
+                    <Trimestre fecha="2023-03-01" totalCuentas="1" cuentasConsideradas="1" saldo="5919666" />
+                    <Trimestre fecha="2022-12-01" totalCuentas="1" cuentasConsideradas="1" saldo="7025666" />
+                    <Trimestre fecha="2022-09-01" totalCuentas="2" cuentasConsideradas="1" saldo="7845500" />
+                    <Trimestre fecha="2022-06-01" totalCuentas="1" cuentasConsideradas="1" saldo="2324666" />
+                    <Trimestre fecha="2022-03-01" totalCuentas="1" cuentasConsideradas="1" saldo="3000000" />
+                    <Trimestre fecha="2021-12-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CAC">
+                    <Trimestre fecha="2023-09-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2023-06-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2023-03-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-12-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-09-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-06-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-03-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2021-12-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CCF">
+                    <Trimestre fecha="2023-09-01" totalCuentas="1" cuentasConsideradas="1" saldo="701000" />
+                    <Trimestre fecha="2023-06-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2023-03-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-12-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-09-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-06-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-03-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2021-12-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CON">
+                    <Trimestre fecha="2023-09-01" totalCuentas="1" cuentasConsideradas="1" saldo="716000" />
+                    <Trimestre fecha="2023-06-01" totalCuentas="2" cuentasConsideradas="2" saldo="844000" />
+                    <Trimestre fecha="2023-03-01" totalCuentas="2" cuentasConsideradas="2" saldo="1144000" />
+                    <Trimestre fecha="2022-12-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-09-01" totalCuentas="1" cuentasConsideradas="1" saldo="245000" />
+                    <Trimestre fecha="2022-06-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-03-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2021-12-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                </TipoCuenta>
+                <TipoCuenta tipo="CTC">
+                    <Trimestre fecha="2023-09-01" totalCuentas="2" cuentasConsideradas="1" saldo="50666" />
+                    <Trimestre fecha="2023-06-01" totalCuentas="2" cuentasConsideradas="1" saldo="38000" />
+                    <Trimestre fecha="2023-03-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-12-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-09-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-06-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-03-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2021-12-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                </TipoCuenta>
+                <TipoCuenta tipo="TDC">
+                    <Trimestre fecha="2023-09-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2023-06-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2023-03-01" totalCuentas="2" cuentasConsideradas="2" saldo="7653000" />
+                    <Trimestre fecha="2022-12-01" totalCuentas="2" cuentasConsideradas="2" saldo="10519333" />
+                    <Trimestre fecha="2022-09-01" totalCuentas="2" cuentasConsideradas="1" saldo="4352000" />
+                    <Trimestre fecha="2022-06-01" totalCuentas="1" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2022-03-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                    <Trimestre fecha="2021-12-01" totalCuentas="0" cuentasConsideradas="0" saldo="0" />
+                </TipoCuenta>
+                <Totales fecha="2023-09-01" totalCuentas="7" cuentasConsideradas="6" saldo="17048666.7" />
+                <Totales fecha="2023-06-01" totalCuentas="8" cuentasConsideradas="6" saldo="18052333.3" />
+                <Totales fecha="2023-03-01" totalCuentas="6" cuentasConsideradas="5" saldo="14716666.7" />
+                <Totales fecha="2022-12-01" totalCuentas="6" cuentasConsideradas="3" saldo="17545000.0" />
+                <Totales fecha="2022-09-01" totalCuentas="7" cuentasConsideradas="3" saldo="12442500.0" />
+                <Totales fecha="2022-06-01" totalCuentas="4" cuentasConsideradas="1" saldo="2324666.7" />
+                <Totales fecha="2022-03-01" totalCuentas="2" cuentasConsideradas="1" saldo="3000000.0" />
+                <Totales fecha="2021-12-01" totalCuentas="2" cuentasConsideradas="0" saldo="0.0" />
+            </HistoricoSaldos>
+            <ResumenEndeudamiento>
+                <Trimestre fecha="2023-06-01">
+                    <Sector sector="Financiero" codigoSector="1" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="2" valor="12290.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="1" valor="4417.0" />
+                    </Sector>
+                    <Sector sector="Cooperativo" codigoSector="2" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                    <Sector sector="Real" codigoSector="3" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="2" valor="718.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                    <Sector sector="Telcos" codigoSector="4" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="1" valor="38.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                </Trimestre>
+                <Trimestre fecha="2023-03-01">
+                    <Sector sector="Financiero" codigoSector="1" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="4" valor="12360.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="1" valor="5737.0" />
+                    </Sector>
+                    <Sector sector="Cooperativo" codigoSector="2" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                    <Sector sector="Real" codigoSector="3" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="2" valor="1144.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                    <Sector sector="Telcos" codigoSector="4" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                </Trimestre>
+                <Trimestre fecha="2022-12-01">
+                    <Sector sector="Financiero" codigoSector="1" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="2" valor="11763.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="1" valor="6926.0" />
+                    </Sector>
+                    <Sector sector="Cooperativo" codigoSector="2" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                    <Sector sector="Real" codigoSector="3" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                    <Sector sector="Telcos" codigoSector="4" garantiaAdmisible="0" garantiaOtro="0">
+                        <Cartera tipo="Comercial" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Hipotecario" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Consumo" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Tarjeta de Crédito" numeroCuentas="0" valor="0.0" />
+                        <Cartera tipo="Microcrédito" numeroCuentas="0" valor="0.0" />
+                    </Sector>
+                </Trimestre>
+            </ResumenEndeudamiento>
+        </InfoAgregada>
+        <InfoAgregadaMicrocredito>
+            <Resumen>
+                <PerfilGeneral>
+                    <CreditosVigentes sectorFinanciero="3" sectorCooperativo="0" sectorReal="2" sectorTelcos="2" totalComoPrincipal="7" totalComoCodeudorYOtros="0" />
+                    <CreditosCerrados sectorFinanciero="3" sectorCooperativo="1" sectorReal="3" sectorTelcos="1" totalComoPrincipal="8" totalComoCodeudorYOtros="0" />
+                    <CreditosReestructurados sectorFinanciero="0" sectorCooperativo="0" sectorReal="0" sectorTelcos="0" totalComoPrincipal="0" totalComoCodeudorYOtros="0" />
+                    <CreditosRefinanciados sectorFinanciero="0" sectorCooperativo="0" sectorReal="0" sectorTelcos="0" totalComoPrincipal="0" totalComoCodeudorYOtros="0" />
+                    <ConsultaUlt6Meses sectorFinanciero="7" sectorCooperativo="0" sectorReal="0" sectorTelcos="0" totalComoPrincipal="0" totalComoCodeudorYOtros="0" />
+                    <Desacuerdos sectorFinanciero="0" sectorCooperativo="0" sectorReal="0" sectorTelcos="0" totalComoPrincipal="0" totalComoCodeudorYOtros="0" />
+                    <AntiguedadDesde sectorCooperativo="2021-05-10" sectorFinanciero="2017-09-29" sectorReal="2022-06-12" sectorTelcos="2017-09-16" />
+                </PerfilGeneral>
+                <VectorSaldosYMoras poseeSectorCooperativo="false" poseeSectorFinanciero="true" poseeSectorReal="true" poseeSectorTelcos="true">
+                    <SaldosYMoras fecha="2023-09-30" totalCuentasMora="2" saldoDeudaTotalMora="1309.0" saldoDeudaTotal="16645.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="C" morasMaxSectorTelcos="N" morasMaximas="C" numCreditos30="0" numCreditosMayorIgual60="2" />
+                    <SaldosYMoras fecha="2023-08-30" totalCuentasMora="2" saldoDeudaTotalMora="1152.0" saldoDeudaTotal="16962.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="4" morasMaxSectorTelcos="N" morasMaximas="4" numCreditos30="0" numCreditosMayorIgual60="2" />
+                    <SaldosYMoras fecha="2023-07-30" totalCuentasMora="2" saldoDeudaTotalMora="772.0" saldoDeudaTotal="17539.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="3" morasMaxSectorTelcos="N" morasMaximas="3" numCreditos30="1" numCreditosMayorIgual60="1" />
+                    <SaldosYMoras fecha="2023-06-30" totalCuentasMora="1" saldoDeudaTotalMora="171.0" saldoDeudaTotal="17342.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="2" morasMaxSectorTelcos="N" morasMaximas="2" numCreditos30="0" numCreditosMayorIgual60="1" />
+                    <SaldosYMoras fecha="2023-05-30" totalCuentasMora="1" saldoDeudaTotalMora="171.0" saldoDeudaTotal="18336.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="1" morasMaxSectorTelcos="N" morasMaximas="1" numCreditos30="1" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2023-04-30" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="18440.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2023-03-30" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="19057.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2023-02-28" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="17818.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2023-01-28" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="17578.0" morasMaxSectorFinanciero="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2022-12-28" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="18427.0" morasMaxSectorFinanciero="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2022-11-28" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="18868.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                    <SaldosYMoras fecha="2022-10-28" totalCuentasMora="0" saldoDeudaTotalMora="0.0" saldoDeudaTotal="15340.0" morasMaxSectorFinanciero="N" morasMaxSectorReal="N" morasMaxSectorTelcos="N" morasMaximas="N" numCreditos30="0" numCreditosMayorIgual60="0" />
+                </VectorSaldosYMoras>
+                <EndeudamientoActual>
+                    <Sector codSector="1">
+                        <TipoCuenta tipoCuenta="CAB">
+                            <Usuario tipoUsuario="Principal">
+                                <Cuenta estadoActual="Al día" calificacion="A" valorInicial="11694.0" saldoActual="11285.0" saldoMora="0.0" cuotaMes="539.0" comportamientoNegativo="false" totalDeudaCarteras="16645.0" />
+                                <Cuenta estadoActual="Al día" calificacion="A" valorInicial="666.0" saldoActual="526.0" saldoMora="0.0" cuotaMes="28.0" comportamientoNegativo="false" totalDeudaCarteras="16645.0" />
+                                <Cuenta estadoActual="Al día" calificacion="A" valorInicial="8000.0" saldoActual="3342.0" saldoMora="0.0" cuotaMes="660.0" comportamientoNegativo="false" totalDeudaCarteras="16645.0" />
+                            </Usuario>
+                        </TipoCuenta>
+                    </Sector>
+                    <Sector codSector="3">
+                        <TipoCuenta tipoCuenta="CCF">
+                            <Usuario tipoUsuario="Principal">
+                                <Cuenta estadoActual="Cart. castigada" calificacion="-" valorInicial="871.0" saldoActual="701.0" saldoMora="594.0" cuotaMes="39.0" comportamientoNegativo="true" totalDeudaCarteras="16645.0" />
+                            </Usuario>
+                        </TipoCuenta>
+                        <TipoCuenta tipoCuenta="CON">
+                            <Usuario tipoUsuario="Principal">
+                                <Cuenta estadoActual="Esta en mora 120" calificacion="C" valorInicial="913.0" saldoActual="715.0" saldoMora="715.0" cuotaMes="182.0" comportamientoNegativo="true" totalDeudaCarteras="16645.0" />
+                            </Usuario>
+                        </TipoCuenta>
+                    </Sector>
+                    <Sector codSector="4">
+                        <TipoCuenta tipoCuenta="CTC">
+                            <Usuario tipoUsuario="Principal">
+                                <Cuenta estadoActual="Al día" calificacion="-" valorInicial="0.0" saldoActual="0.0" saldoMora="0.0" cuotaMes="0.0" comportamientoNegativo="false" totalDeudaCarteras="16645.0" />
+                                <Cuenta estadoActual="Al día" calificacion="A" valorInicial="0.0" saldoActual="76.0" saldoMora="0.0" cuotaMes="0.0" comportamientoNegativo="false" totalDeudaCarteras="16645.0" />
+                            </Usuario>
+                        </TipoCuenta>
+                    </Sector>
+                </EndeudamientoActual>
+                <ImagenTendenciaEndeudamiento>
+                    <Series serie="Cartera bancaria">
+                        <Valores>
+                            <Valor valor="74.4" fecha="2023-09-30" />
+                            <Valor valor="76.2" fecha="2023-08-30" />
+                            <Valor valor="79.0" fecha="2023-07-30" />
+                            <Valor valor="81.5" fecha="2023-06-30" />
+                            <Valor valor="85.6" fecha="2023-05-30" />
+                            <Valor valor="85.9" fecha="2023-04-30" />
+                            <Valor valor="88.0" fecha="2023-03-30" />
+                            <Valor valor="74.0" fecha="2023-02-28" />
+                            <Valor valor="78.6" fecha="2023-01-30" />
+                            <Valor valor="83.3" fecha="2022-12-30" />
+                            <Valor valor="88.1" fecha="2022-11-30" />
+                            <Valor valor="92.1" fecha="2022-10-30" />
+                        </Valores>
+                    </Series>
+                    <Series serie="Cartera c/ias. financ. cial.">
+                        <Valores>
+                            <Valor valor="80.5" fecha="2023-09-30" />
+                            <Valor valor="80.5" fecha="2023-08-30" />
+                            <Valor valor="80.5" fecha="2023-07-30" />
+                            <Valor valor="0.0" fecha="2023-06-30" />
+                            <Valor valor="0.0" fecha="2023-05-30" />
+                            <Valor valor="0.0" fecha="2023-04-30" />
+                            <Valor valor="0.0" fecha="2022-11-30" />
+                            <Valor valor="0.0" fecha="2022-10-30" />
+                        </Valores>
+                    </Series>
+                    <Series serie="Créditos de consumo">
+                        <Valores>
+                            <Valor valor="78.3" fecha="2023-09-30" />
+                            <Valor valor="78.4" fecha="2023-08-30" />
+                            <Valor valor="78.5" fecha="2023-07-30" />
+                            <Valor valor="58.8" fecha="2023-06-30" />
+                            <Valor valor="70.8" fecha="2023-05-30" />
+                            <Valor valor="77.7" fecha="2023-04-30" />
+                            <Valor valor="93.7" fecha="2023-03-30" />
+                            <Valor valor="75.0" fecha="2023-02-28" />
+                            <Valor valor="0.0" fecha="2022-10-30" />
+                        </Valores>
+                    </Series>
+                    <Series serie="Tarjeta de crédito">
+                        <Valores>
+                            <Valor valor="98.9" fecha="2023-02-28" />
+                            <Valor valor="95.7" fecha="2023-01-30" />
+                            <Valor valor="99.7" fecha="2022-12-30" />
+                            <Valor valor="100.2" fecha="2022-11-30" />
+                            <Valor valor="67.6" fecha="2022-10-30" />
+                        </Valores>
+                    </Series>
+                </ImagenTendenciaEndeudamiento>
+            </Resumen>
+            <AnalisisVectores>
+                <Sector nombreSector="Sector Financiero">
+                    <Cuenta entidad="BANCOLOMBIA" numeroCuenta="211932131" tipoCuenta="CAB" estado="Al día" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="BANCOLOMBIA" numeroCuenta="211932132" tipoCuenta="CAB" estado="Al día" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="Bancompartir   Finamerica" numeroCuenta="152486681" tipoCuenta="CAB" estado="Al día" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="Bancompartir   Finamerica" numeroCuenta="112021666" tipoCuenta="CAB" estado="Pago Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-03-30" />
+                        <CaracterFecha fecha="2023-02-28" />
+                        <CaracterFecha fecha="2023-01-28" />
+                        <CaracterFecha fecha="2022-12-28" />
+                        <CaracterFecha fecha="2022-11-28" />
+                        <CaracterFecha fecha="2022-10-28" />
+                        <CaracterFecha fecha="2022-09-28" />
+                        <CaracterFecha fecha="2022-08-28" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="BANCOLOMBIA    AME. EXP." numeroCuenta="037748962" tipoCuenta="TDC" estado="Cancelada Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="BANCOLOMBIA    MASTERCARD" numeroCuenta="530361545" tipoCuenta="TDC" estado="Cancelada Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <MorasMaximas>
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                    </MorasMaximas>
+                </Sector>
+                <Sector nombreSector="Sector Real">
+                    <Cuenta entidad="CELYA SAS" numeroCuenta="114780197" tipoCuenta="CCF" estado="Cart. castigada" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="C" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="2" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="1" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="CELYA SAS" numeroCuenta="111588132" tipoCuenta="CCF" estado="Pago Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-03-30" />
+                        <CaracterFecha fecha="2023-02-28" />
+                        <CaracterFecha fecha="2023-01-28" />
+                        <CaracterFecha fecha="2022-12-28" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="SISTECREDITO" numeroCuenta="130911111" tipoCuenta="CON" estado="Esta en mora 120" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="4" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="4" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="3" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="2" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="1" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="SISTECREDITO" numeroCuenta="110611111" tipoCuenta="CON" estado="Pago Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <Cuenta entidad="SISTECREDITO" numeroCuenta="161511111" tipoCuenta="CON" estado="Pago Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-03-30" />
+                        <CaracterFecha fecha="2023-02-28" />
+                        <CaracterFecha fecha="2023-01-28" />
+                        <CaracterFecha fecha="2022-12-28" />
+                        <CaracterFecha fecha="2022-11-28" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <MorasMaximas>
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="1" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="2" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="3" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="4" />
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="C" />
+                    </MorasMaximas>
+                </Sector>
+                <Sector nombreSector="Sector Telcos">
+                    <Cuenta entidad="COLOMBIA MOVIL" numeroCuenta="574364185" tipoCuenta="CTC" estado="Al día" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="N" />
+                    </Cuenta>
+                    <Cuenta entidad="COMCEL S.A." numeroCuenta="882320912" tipoCuenta="CTC" estado="Al día" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="-" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="-" />
+                    </Cuenta>
+                    <MorasMaximas>
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2021-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2021-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-03-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-04-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-05-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-06-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-07-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-08-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-09-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-11-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2022-12-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-01-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-02-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-03-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-04-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-05-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-06-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-07-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-08-30" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2023-09-30" saldoDeudaTotalMora="N" />
+                    </MorasMaximas>
+                </Sector>
+                <Sector nombreSector="Sector Cooperativo">
+                    <Cuenta entidad="COOP DE AHORRO CREDIFLORES" numeroCuenta="011111118" tipoCuenta="CAC" estado="Pago Vol" contieneDatos="true">
+                        <CaracterFecha fecha="2023-09-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-03-30" />
+                        <CaracterFecha fecha="2023-02-28" />
+                        <CaracterFecha fecha="2023-01-28" />
+                        <CaracterFecha fecha="2022-12-28" />
+                        <CaracterFecha fecha="2022-11-28" />
+                        <CaracterFecha fecha="2022-10-28" />
+                        <CaracterFecha fecha="2022-09-28" />
+                        <CaracterFecha fecha="2022-08-28" />
+                        <CaracterFecha fecha="2022-07-28" />
+                        <CaracterFecha fecha="2022-06-28" />
+                        <CaracterFecha fecha="2022-05-28" />
+                        <CaracterFecha fecha="2022-04-28" />
+                        <CaracterFecha fecha="2022-03-28" />
+                        <CaracterFecha fecha="2022-02-28" />
+                        <CaracterFecha fecha="2022-01-28" />
+                        <CaracterFecha fecha="2021-12-28" />
+                        <CaracterFecha fecha="2021-11-28" />
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="N" />
+                    </Cuenta>
+                    <MorasMaximas>
+                        <CaracterFecha fecha="2021-10-28" saldoDeudaTotalMora="N" />
+                        <CaracterFecha fecha="2021-11-28" />
+                        <CaracterFecha fecha="2021-12-28" />
+                        <CaracterFecha fecha="2022-01-28" />
+                        <CaracterFecha fecha="2022-02-28" />
+                        <CaracterFecha fecha="2022-03-28" />
+                        <CaracterFecha fecha="2022-04-28" />
+                        <CaracterFecha fecha="2022-05-28" />
+                        <CaracterFecha fecha="2022-06-28" />
+                        <CaracterFecha fecha="2022-07-28" />
+                        <CaracterFecha fecha="2022-08-28" />
+                        <CaracterFecha fecha="2022-09-28" />
+                        <CaracterFecha fecha="2022-10-28" />
+                        <CaracterFecha fecha="2022-11-28" />
+                        <CaracterFecha fecha="2022-12-28" />
+                        <CaracterFecha fecha="2023-01-28" />
+                        <CaracterFecha fecha="2023-02-28" />
+                        <CaracterFecha fecha="2023-03-30" />
+                        <CaracterFecha fecha="2023-04-30" />
+                        <CaracterFecha fecha="2023-05-30" />
+                        <CaracterFecha fecha="2023-06-30" />
+                        <CaracterFecha fecha="2023-07-30" />
+                        <CaracterFecha fecha="2023-08-30" />
+                        <CaracterFecha fecha="2023-09-30" />
+                    </MorasMaximas>
+                </Sector>
+            </AnalisisVectores>
+            <EvolucionDeuda>
+                <Trimestres>
+                    <Trimestre>2023/09</Trimestre>
+                    <Trimestre>2023/06</Trimestre>
+                    <Trimestre>2023/03</Trimestre>
+                    <Trimestre>2022/12</Trimestre>
+                    <Trimestre>2022/09</Trimestre>
+                    <Trimestre>2022/06</Trimestre>
+                </Trimestres>
+                <EvolucionDeudaSector codSector="1" nombreSector="Financiero">
+                    <EvolucionDeudaTipoCuenta tipoCuenta="CAB">
+                        <EvolucionDeudaValorTrimestre trimestre="2023/09" tipoCuenta="CAB" num="3" cupoInicial="20360.0" saldo="15153.0" saldoMora="0.0" cuota="1227.0" porcentajeDeuda="74.4" codMenorCalificacion="1" textoMenorCalificacion="A" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/06" tipoCuenta="CAB" num="3" cupoInicial="20360.0" saldo="16586.0" saldoMora="0.0" cuota="604.0" porcentajeDeuda="81.5" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/03" tipoCuenta="CAB" num="1" cupoInicial="20360.0" saldo="17913.0" saldoMora="0.0" cuota="418.0" porcentajeDeuda="88.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/12" tipoCuenta="CAB" num="1" cupoInicial="8000.0" saldo="6664.0" saldoMora="0.0" cuota="670.0" porcentajeDeuda="83.3" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/09" tipoCuenta="CAB" num="1" cupoInicial="8000.0" saldo="7691.0" saldoMora="0.0" cuota="679.0" porcentajeDeuda="96.1" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/06" tipoCuenta="CAB" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                    </EvolucionDeudaTipoCuenta>
+                    <EvolucionDeudaTipoCuenta tipoCuenta="TDC">
+                        <EvolucionDeudaValorTrimestre trimestre="2023/09" tipoCuenta="TDC" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/06" tipoCuenta="TDC" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/03" tipoCuenta="TDC" num="2" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/12" tipoCuenta="TDC" num="2" cupoInicial="11800.0" saldo="11763.0" saldoMora="0.0" cuota="1459.0" porcentajeDeuda="99.7" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/09" tipoCuenta="TDC" num="2" cupoInicial="11800.0" saldo="5185.0" saldoMora="0.0" cuota="216.0" porcentajeDeuda="43.9" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/06" tipoCuenta="TDC" num="1" cupoInicial="5000.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                    </EvolucionDeudaTipoCuenta>
+                </EvolucionDeudaSector>
+                <EvolucionDeudaSector codSector="3" nombreSector="Real">
+                    <EvolucionDeudaTipoCuenta tipoCuenta="CCF">
+                        <EvolucionDeudaValorTrimestre trimestre="2023/09" tipoCuenta="CCF" num="1" cupoInicial="871.0" saldo="701.0" saldoMora="594.0" cuota="39.0" porcentajeDeuda="80.5" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/06" tipoCuenta="CCF" num="1" cupoInicial="871.0" saldo="0.0" saldoMora="0.0" cuota="39.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/03" tipoCuenta="CCF" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/12" tipoCuenta="CCF" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/09" tipoCuenta="CCF" num="1" cupoInicial="1168.0" saldo="0.0" saldoMora="0.0" cuota="51.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/06" tipoCuenta="CCF" num="1" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                    </EvolucionDeudaTipoCuenta>
+                    <EvolucionDeudaTipoCuenta tipoCuenta="CON">
+                        <EvolucionDeudaValorTrimestre trimestre="2023/09" tipoCuenta="CON" num="1" cupoInicial="913.0" saldo="715.0" saldoMora="715.0" cuota="182.0" porcentajeDeuda="78.3" codMenorCalificacion="3" textoMenorCalificacion="C" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/06" tipoCuenta="CON" num="2" cupoInicial="1221.0" saldo="718.0" saldoMora="171.0" cuota="182.0" porcentajeDeuda="58.8" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/03" tipoCuenta="CON" num="2" cupoInicial="1221.0" saldo="1144.0" saldoMora="0.0" cuota="259.0" porcentajeDeuda="93.7" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/12" tipoCuenta="CON" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/09" tipoCuenta="CON" num="1" cupoInicial="327.0" saldo="163.0" saldoMora="0.0" cuota="81.0" porcentajeDeuda="49.8" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/06" tipoCuenta="CON" num="0" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                    </EvolucionDeudaTipoCuenta>
+                </EvolucionDeudaSector>
+                <EvolucionDeudaSector codSector="4" nombreSector="Telcos">
+                    <EvolucionDeudaTipoCuenta tipoCuenta="CTC">
+                        <EvolucionDeudaValorTrimestre trimestre="2023/09" tipoCuenta="CTC" num="2" cupoInicial="0.0" saldo="76.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="1" textoMenorCalificacion="A" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/06" tipoCuenta="CTC" num="2" cupoInicial="0.0" saldo="38.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2023/03" tipoCuenta="CTC" num="1" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/12" tipoCuenta="CTC" num="1" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/09" tipoCuenta="CTC" num="1" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                        <EvolucionDeudaValorTrimestre trimestre="2022/06" tipoCuenta="CTC" num="1" cupoInicial="0.0" saldo="0.0" saldoMora="0.0" cuota="0.0" porcentajeDeuda="0.0" codMenorCalificacion="0" textoMenorCalificacion="-" />
+                    </EvolucionDeudaTipoCuenta>
+                </EvolucionDeudaSector>
+            </EvolucionDeuda>
+        </InfoAgregadaMicrocredito>
+    </Informe>
+</Informes>

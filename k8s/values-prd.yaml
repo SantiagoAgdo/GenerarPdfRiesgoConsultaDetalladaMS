@@ -1,0 +1,81 @@
+# Default values for api.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+fullnameOverride: us-generarpdfhistorialcrediticiodetallado
+replicaCount: 1
+type: api
+project: us-generarpdfhistorialcrediticiodetallado
+releaseId: ""
+environment: "prd"
+
+image:
+  repository: "acrenvironmicrostrv001.azurecr.io/prdfldrimgapi"
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: us-generarpdfhistorial-v1.0.0
+
+logs:
+  enabled: false
+  
+settingSecrets: 
+  enabled: false
+
+readinessProbe:
+  httpGet:
+    path: /q/health
+    port: 8080
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+podAnnotations: { }
+
+podSecurityContext: { }
+
+securityContext:
+  readOnlyRootFilesystem: false
+  
+service:
+  type: ClusterIP
+  port: 80
+  internalEnabled: true
+  ip:
+
+ingress:
+  enabled: true
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 20m
+    nginx.org/client-max-body-size: 20m
+  hosts:
+    path: /v1/us/historial-credito
+    pathType: Prefix
+    host: priv-ingressprd.mibanco.com.co
+    
+resources:
+  limits:
+    cpu: 300m
+    memory: 512Mi
+    ephemeral-storage: "512Mi"
+  requests:
+    cpu: 100m
+    memory: 128Mi
+    ephemeral-storage: "64Mi"
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  threshold: 20
+
+nodeSelector:
+  kubernetes.io/os: linux
+
+tolerations: []
+
+affinity: {}
+
+envs:
+  - name: "quarkus.http.port"
+    value: "8080"
+  - name: quarkus.rest-client.IArchivoUS.url
+    value: http://us-archivo/v1/us
